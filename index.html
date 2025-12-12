@@ -11,6 +11,7 @@ body {
   background:#f8f8f8;
   margin:0;
   color:#222;
+  padding-bottom: 92px; /* ✅ alttaki sabit çubuk içeriği kapatmasın */
 }
 header {
   background:#1c3d2e;
@@ -77,6 +78,69 @@ th{ background:#e2eee7; font-weight:bold; }
   .kaaba-box{ width:260px; min-width:260px; }
   .kaaba-box svg{ width:230px; height:230px; }
 }
+
+/* ===========================
+   ✅ Sabit Sure/Ayet Seçim Barı
+   =========================== */
+.navbar-fixed {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255,255,255,0.96);
+  border-top: 1px solid #ddd;
+  box-shadow: 0 -8px 18px rgba(0,0,0,0.08);
+  padding: 12px 12px;
+  z-index: 9999;
+  backdrop-filter: blur(6px);
+}
+
+.navbar-inner{
+  max-width: 1150px;
+  margin: 0 auto;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.nav-title{
+  font-weight: 700;
+  color:#1c3d2e;
+  margin-right: 6px;
+}
+
+.navbar-inner select{
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 15px;
+  min-width: 180px;
+  background:#fff;
+}
+
+.navbar-inner button{
+  padding: 10px 14px;
+  border: 1px solid #1c3d2e;
+  background:#1c3d2e;
+  color:#fff;
+  border-radius: 10px;
+  font-size: 15px;
+  cursor: pointer;
+  font-weight: 700;
+}
+.navbar-inner button:hover{
+  opacity: 0.95;
+}
+
+.nav-hint{
+  width:100%;
+  text-align:center;
+  font-size: 12px;
+  color:#666;
+  margin-top: 2px;
+}
 </style>
 </head>
 
@@ -87,61 +151,43 @@ th{ background:#e2eee7; font-weight:bold; }
 <div class="container">
   <div class="content-wrap">
 
-    <!-- === DAHA GERÇEKÇİ KÂBE (TELİFSİZ SVG) === -->
+    <!-- Sol: Kâbe (maket gibi) -->
     <div class="kaaba-box">
       <svg viewBox="0 0 320 320" aria-hidden="true">
-  <!-- Zemin -->
-  <rect x="0" y="0" width="320" height="320" fill="#ffffff"/>
-  <ellipse cx="165" cy="282" rx="110" ry="20" fill="#000" opacity="0.10"/>
+        <rect x="0" y="0" width="320" height="320" fill="#ffffff"/>
+        <ellipse cx="165" cy="282" rx="110" ry="20" fill="#000" opacity="0.10"/>
 
-  <!-- 3D gövde (maket görünümü) -->
-  <!-- Üst yüz -->
-  <polygon points="70,110 165,60 255,110 165,160"
-           fill="#232323"/>
-  <!-- Ön yüz -->
-  <polygon points="70,110 165,160 165,270 70,220"
-           fill="#0e0e0e"/>
-  <!-- Sağ yüz -->
-  <polygon points="165,160 255,110 255,220 165,270"
-           fill="#050505"/>
+        <polygon points="70,110 165,60 255,110 165,160" fill="#232323"/>
+        <polygon points="70,110 165,160 165,270 70,220" fill="#0e0e0e"/>
+        <polygon points="165,160 255,110 255,220 165,270" fill="#050505"/>
 
-  <!-- Keskin kenar çizgisi (maket hissi) -->
-  <polyline points="70,110 165,160 255,110"
-            fill="none" stroke="#ffffff" stroke-opacity="0.06" stroke-width="2"/>
+        <polyline points="70,110 165,160 255,110" fill="none" stroke="#ffffff" stroke-opacity="0.06" stroke-width="2"/>
 
-  <!-- Kisve kuşak (kalın + desen şeridi) -->
-  <rect x="100" y="142" width="130" height="16" fill="#d8b24a"/>
-  <rect x="100" y="162" width="130" height="10" fill="#caa23e"/>
-  <!-- Desen hissi (soyut, telifsiz) -->
-  <g opacity="0.20">
-    <rect x="108" y="146" width="10" height="8" fill="#fff"/>
-    <rect x="124" y="146" width="10" height="8" fill="#fff"/>
-    <rect x="140" y="146" width="10" height="8" fill="#fff"/>
-    <rect x="156" y="146" width="10" height="8" fill="#fff"/>
-    <rect x="172" y="146" width="10" height="8" fill="#fff"/>
-    <rect x="188" y="146" width="10" height="8" fill="#fff"/>
-    <rect x="204" y="146" width="10" height="8" fill="#fff"/>
-  </g>
+        <rect x="100" y="142" width="130" height="16" fill="#d8b24a"/>
+        <rect x="100" y="162" width="130" height="10" fill="#caa23e"/>
+        <g opacity="0.20">
+          <rect x="108" y="146" width="10" height="8" fill="#fff"/>
+          <rect x="124" y="146" width="10" height="8" fill="#fff"/>
+          <rect x="140" y="146" width="10" height="8" fill="#fff"/>
+          <rect x="156" y="146" width="10" height="8" fill="#fff"/>
+          <rect x="172" y="146" width="10" height="8" fill="#fff"/>
+          <rect x="188" y="146" width="10" height="8" fill="#fff"/>
+          <rect x="204" y="146" width="10" height="8" fill="#fff"/>
+        </g>
 
-  <!-- Kapı (ön yüzde, perspektifli) -->
-  <polygon points="150,190 180,190 180,258 150,245"
-           fill="#8b6b2f"/>
-  <polygon points="154,195 176,195 176,252 154,240"
-           fill="#a7843a" opacity="0.90"/>
-  <circle cx="174" cy="222" r="2.2" fill="#3a2a12" opacity="0.8"/>
+        <polygon points="150,190 180,190 180,258 150,245" fill="#8b6b2f"/>
+        <polygon points="154,195 176,195 176,252 154,240" fill="#a7843a" opacity="0.90"/>
+        <circle cx="174" cy="222" r="2.2" fill="#3a2a12" opacity="0.8"/>
 
-  <!-- Köşe vurguları -->
-  <line x1="70" y1="110" x2="70" y2="220" stroke="#ffffff" stroke-opacity="0.07" stroke-width="2"/>
-  <line x1="255" y1="110" x2="255" y2="220" stroke="#000" stroke-opacity="0.25" stroke-width="2"/>
+        <line x1="70" y1="110" x2="70" y2="220" stroke="#ffffff" stroke-opacity="0.07" stroke-width="2"/>
+        <line x1="255" y1="110" x2="255" y2="220" stroke="#000" stroke-opacity="0.25" stroke-width="2"/>
 
-  <!-- Mini “örtü kıvrımı” efekti -->
-  <path d="M78 138 C110 126, 140 126, 162 138 C190 152, 220 152, 246 138"
-        fill="none" stroke="#ffffff" stroke-opacity="0.03" stroke-width="4"/>
-</svg>
-
+        <path d="M78 138 C110 126, 140 126, 162 138 C190 152, 220 152, 246 138"
+              fill="none" stroke="#ffffff" stroke-opacity="0.03" stroke-width="4"/>
+      </svg>
     </div>
 
-    <!-- === SAĞ METİN === -->
+    <!-- Sağ: Metin -->
     <div class="text-box">
       <h2>1. Âyet</h2>
 
@@ -149,12 +195,35 @@ th{ background:#e2eee7; font-weight:bold; }
 
       <table>
         <tr>
-          <th>Kelime</th><th>Kök (Türkçe)</th><th>Sözlük Anlamı</th><th>Sade Türkçe Karşılığı</th>
+          <th>Kelime</th>
+          <th>Kök (Türkçe)</th>
+          <th>Sözlük Anlamı</th>
+          <th>Sade Türkçe Karşılığı</th>
         </tr>
-        <tr><td>بِسْمِ</td><td>ism → ad</td><td>isimle</td><td>adı ile</td></tr>
-        <tr><td>اللَّهِ</td><td>ilâh</td><td>Allah</td><td>Allah’ın</td></tr>
-        <tr><td>الرَّحْمَٰنِ</td><td>r-ḥ-m</td><td>çok merhamet eden</td><td>Rahmân’ın</td></tr>
-        <tr><td>الرَّحِيمِ</td><td>r-ḥ-m</td><td>sürekli merhamet eden</td><td>Rahîm’in</td></tr>
+        <tr>
+          <td>بِسْمِ</td>
+          <td>ism → ad, belirti</td>
+          <td>isimle, adla</td>
+          <td>adı ile</td>
+        </tr>
+        <tr>
+          <td>اللَّهِ</td>
+          <td>ilâh → yönelinen</td>
+          <td>Allah</td>
+          <td>Allah’ın</td>
+        </tr>
+        <tr>
+          <td>الرَّحْمَٰنِ</td>
+          <td>r-ḥ-m → merhamet</td>
+          <td>çok merhamet eden</td>
+          <td>Rahmân’ın</td>
+        </tr>
+        <tr>
+          <td>الرَّحِيمِ</td>
+          <td>r-ḥ-m → merhamet</td>
+          <td>sürekli merhamet eden</td>
+          <td>Rahîm’in</td>
+        </tr>
       </table>
 
       <h2>Sade Türkçe Ayet</h2>
@@ -169,6 +238,60 @@ th{ background:#e2eee7; font-weight:bold; }
 </div>
 
 <div class="footer">© 2025 – Kur'an Kelime Kelime Anlam Çalışması</div>
+
+<!-- ✅ Sabit sure/ayet seçimi -->
+<div class="navbar-fixed">
+  <div class="navbar-inner">
+    <span class="nav-title">Hızlı Geçiş:</span>
+
+    <select id="surahSelect" aria-label="Sure seç">
+      <option value="fatiha" selected>Fâtiha</option>
+      <!-- İleride: <option value="bakara">Bakara</option> ... -->
+    </select>
+
+    <select id="ayahSelect" aria-label="Ayet seç">
+      <option value="1" selected>1. Âyet</option>
+      <option value="2">2. Âyet</option>
+      <option value="3">3. Âyet</option>
+      <option value="4">4. Âyet</option>
+      <option value="5">5. Âyet</option>
+      <option value="6">6. Âyet</option>
+      <option value="7">7. Âyet</option>
+    </select>
+
+    <button id="goBtn" type="button">Git</button>
+
+    <div class="nav-hint">Fâtiha seçili — Âyet seçip “Git”e basınca doğrudan o sayfaya gider.</div>
+  </div>
+</div>
+
+<script>
+(function () {
+  const surahSelect = document.getElementById("surahSelect");
+  const ayahSelect  = document.getElementById("ayahSelect");
+  const goBtn       = document.getElementById("goBtn");
+
+  function targetUrl(surah, ayah) {
+    // Şimdilik sadece Fâtiha var
+    if (surah === "fatiha") {
+      if (ayah === "1") return "index.html";
+      return ayah + ".html"; // 2..7 => 2.html..7.html
+    }
+    return "index.html";
+  }
+
+  function go() {
+    const surah = surahSelect.value;
+    const ayah  = ayahSelect.value;
+    window.location.href = targetUrl(surah, ayah);
+  }
+
+  goBtn.addEventListener("click", go);
+
+  // İstersen seçer seçmez gitsin:
+  // ayahSelect.addEventListener("change", go);
+})();
+</script>
 
 </body>
 </html>
