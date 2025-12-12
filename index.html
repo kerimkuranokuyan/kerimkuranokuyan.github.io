@@ -90,39 +90,55 @@ th{ background:#e2eee7; font-weight:bold; }
     <!-- === DAHA GERÇEKÇİ KÂBE (TELİFSİZ SVG) === -->
     <div class="kaaba-box">
       <svg viewBox="0 0 320 320" aria-hidden="true">
-        <!-- Zemin gölgesi -->
-        <ellipse cx="165" cy="285" rx="95" ry="18" fill="#000" opacity="0.08"/>
+  <!-- Zemin -->
+  <rect x="0" y="0" width="320" height="320" fill="#ffffff"/>
+  <ellipse cx="165" cy="282" rx="110" ry="20" fill="#000" opacity="0.10"/>
 
-        <!-- Üst yüzey -->
-        <polygon points="80,95 160,55 240,95 160,135"
-                 fill="#1b1b1b"/>
+  <!-- 3D gövde (maket görünümü) -->
+  <!-- Üst yüz -->
+  <polygon points="70,110 165,60 255,110 165,160"
+           fill="#232323"/>
+  <!-- Ön yüz -->
+  <polygon points="70,110 165,160 165,270 70,220"
+           fill="#0e0e0e"/>
+  <!-- Sağ yüz -->
+  <polygon points="165,160 255,110 255,220 165,270"
+           fill="#050505"/>
 
-        <!-- Sol yüzey -->
-        <polygon points="80,95 160,135 160,265 80,225"
-                 fill="#111"/>
+  <!-- Keskin kenar çizgisi (maket hissi) -->
+  <polyline points="70,110 165,160 255,110"
+            fill="none" stroke="#ffffff" stroke-opacity="0.06" stroke-width="2"/>
 
-        <!-- Sağ yüzey -->
-        <polygon points="160,135 240,95 240,225 160,265"
-                 fill="#070707"/>
+  <!-- Kisve kuşak (kalın + desen şeridi) -->
+  <rect x="100" y="142" width="130" height="16" fill="#d8b24a"/>
+  <rect x="100" y="162" width="130" height="10" fill="#caa23e"/>
+  <!-- Desen hissi (soyut, telifsiz) -->
+  <g opacity="0.20">
+    <rect x="108" y="146" width="10" height="8" fill="#fff"/>
+    <rect x="124" y="146" width="10" height="8" fill="#fff"/>
+    <rect x="140" y="146" width="10" height="8" fill="#fff"/>
+    <rect x="156" y="146" width="10" height="8" fill="#fff"/>
+    <rect x="172" y="146" width="10" height="8" fill="#fff"/>
+    <rect x="188" y="146" width="10" height="8" fill="#fff"/>
+    <rect x="204" y="146" width="10" height="8" fill="#fff"/>
+  </g>
 
-        <!-- KISVE (altın kuşak – daha belirgin) -->
-        <rect x="98" y="120" width="124" height="14" fill="#d4af37"/>
-        <rect x="98" y="138" width="124" height="9" fill="#c9a132"/>
+  <!-- Kapı (ön yüzde, perspektifli) -->
+  <polygon points="150,190 180,190 180,258 150,245"
+           fill="#8b6b2f"/>
+  <polygon points="154,195 176,195 176,252 154,240"
+           fill="#a7843a" opacity="0.90"/>
+  <circle cx="174" cy="222" r="2.2" fill="#3a2a12" opacity="0.8"/>
 
-        <!-- Kapı (orantılı ve merkezde) -->
-        <rect x="148" y="175" width="32" height="72" rx="2"
-              fill="#8b6b2f"/>
-        <rect x="152" y="180" width="24" height="62" rx="1.5"
-              fill="#a7843a"/>
+  <!-- Köşe vurguları -->
+  <line x1="70" y1="110" x2="70" y2="220" stroke="#ffffff" stroke-opacity="0.07" stroke-width="2"/>
+  <line x1="255" y1="110" x2="255" y2="220" stroke="#000" stroke-opacity="0.25" stroke-width="2"/>
 
-        <!-- Dikiş/örtü hissi için çok hafif çizgiler -->
-        <line x1="100" y1="155" x2="220" y2="155" stroke="#ffffff" stroke-opacity="0.04"/>
-        <line x1="100" y1="165" x2="220" y2="165" stroke="#ffffff" stroke-opacity="0.03"/>
+  <!-- Mini “örtü kıvrımı” efekti -->
+  <path d="M78 138 C110 126, 140 126, 162 138 C190 152, 220 152, 246 138"
+        fill="none" stroke="#ffffff" stroke-opacity="0.03" stroke-width="4"/>
+</svg>
 
-        <!-- Işık vurgusu -->
-        <polygon points="86,102 156,136 156,146 86,116"
-                 fill="#ffffff" opacity="0.05"/>
-      </svg>
     </div>
 
     <!-- === SAĞ METİN === -->
