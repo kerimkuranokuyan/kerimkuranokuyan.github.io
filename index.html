@@ -7,127 +7,75 @@
 
 <style>
 body {
-    font-family: "Segoe UI", sans-serif;
-    background-color: #f8f8f8;
-    margin: 0;
-    padding: 0;
-    color: #222;
+  font-family: "Segoe UI", sans-serif;
+  background:#f8f8f8;
+  margin:0;
+  color:#222;
 }
-
 header {
-    background: #1c3d2e;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    font-size: 24px;
-    letter-spacing: 1px;
+  background:#1c3d2e;
+  color:#fff;
+  padding:20px;
+  text-align:center;
+  font-size:24px;
+  letter-spacing:1px;
 }
-
 .container {
-    max-width: 1150px;
-    margin: 40px auto;
-    padding: 25px;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 0 12px rgba(0,0,0,0.08);
+  max-width:1150px;
+  margin:40px auto;
+  padding:25px;
+  background:#fff;
+  border-radius:12px;
+  box-shadow:0 0 12px rgba(0,0,0,.08);
+}
+.content-wrap{
+  display:flex;
+  gap:32px;
+  align-items:flex-start;
 }
 
-/* ===== İKİ KOLON ===== */
-.content-wrap {
-    display: flex;
-    gap: 32px;
-    align-items: flex-start;
+/* Sol Kâbe alanı */
+.kaaba-box{
+  width:320px;
+  min-width:320px;
+  aspect-ratio:1/1;
+  border:1px solid #ddd;
+  border-radius:14px;
+  background:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.kaaba-box svg{
+  width:280px;
+  height:280px;
 }
 
-/* ===== SOLDA KÂBE ===== */
-.kaaba-box {
-    width: 300px;
-    min-width: 300px;
-    aspect-ratio: 1 / 1;
-    border: 1px solid #ddd;
-    border-radius: 14px;
-    background: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* Sağ metin */
+.text-box{ flex:1; }
+h2{ color:#1c3d2e; margin-top:0; }
+.ayet{
+  font-size:32px;
+  text-align:center;
+  margin:30px 0;
+  font-weight:bold;
+  direction:rtl;
 }
-
-/* SVG boyutu */
-.kaaba-box svg {
-    width: 260px;
-    height: 260px;
+table{ width:100%; border-collapse:collapse; margin-top:20px; }
+th,td{ border:1px solid #ccc; padding:10px; text-align:center; }
+th{ background:#e2eee7; font-weight:bold; }
+.next{
+  display:block; text-align:center; margin:30px auto;
+  font-size:18px; color:#1c3d2e; text-decoration:none; font-weight:bold;
 }
+.next:hover{ text-decoration:underline; }
+.footer{ text-align:center; padding:20px; color:#555; font-size:14px; }
 
-/* ===== SAĞ METİN ===== */
-.text-box {
-    flex: 1;
-}
-
-h2 {
-    margin-top: 0;
-    color: #1c3d2e;
-}
-
-.ayet {
-    font-size: 32px;
-    text-align: center;
-    margin: 30px 0;
-    font-weight: bold;
-    direction: rtl;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-th, td {
-    border: 1px solid #ccc;
-    padding: 10px;
-    text-align: center;
-}
-
-th {
-    background: #e2eee7;
-    font-weight: bold;
-}
-
-.footer {
-    text-align: center;
-    padding: 20px;
-    color: #555;
-    font-size: 14px;
-}
-
-.next {
-    display: block;
-    text-align: center;
-    margin: 30px auto;
-    font-size: 18px;
-    color: #1c3d2e;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.next:hover {
-    text-decoration: underline;
-}
-
-/* ===== MOBİL ===== */
-@media (max-width: 768px) {
-    .content-wrap {
-        flex-direction: column;
-        align-items: center;
-    }
-    .kaaba-box {
-        width: 240px;
-        min-width: 240px;
-    }
-    .kaaba-box svg {
-        width: 210px;
-        height: 210px;
-    }
+/* Mobil */
+@media(max-width:768px){
+  .content-wrap{ flex-direction:column; align-items:center; }
+  .kaaba-box{ width:260px; min-width:260px; }
+  .kaaba-box svg{ width:230px; height:230px; }
 }
 </style>
 </head>
@@ -137,100 +85,74 @@ th {
 <header>Kur'an Kelime Kelime Anlam – Fâtiha Sûresi</header>
 
 <div class="container">
+  <div class="content-wrap">
 
-<div class="content-wrap">
+    <!-- === DAHA GERÇEKÇİ KÂBE (TELİFSİZ SVG) === -->
+    <div class="kaaba-box">
+      <svg viewBox="0 0 320 320" aria-hidden="true">
+        <!-- Zemin gölgesi -->
+        <ellipse cx="165" cy="285" rx="95" ry="18" fill="#000" opacity="0.08"/>
 
-<!-- ========= SOL: NET KÂBE ========= -->
-<div class="kaaba-box">
+        <!-- Üst yüzey -->
+        <polygon points="80,95 160,55 240,95 160,135"
+                 fill="#1b1b1b"/>
 
-<svg viewBox="0 0 300 300" aria-hidden="true">
-    <!-- Üst yüzey -->
-    <polygon points="80,80 150,40 220,80 150,120"
-             fill="#1a1a1a"/>
+        <!-- Sol yüzey -->
+        <polygon points="80,95 160,135 160,265 80,225"
+                 fill="#111"/>
 
-    <!-- Sol yüz -->
-    <polygon points="80,80 150,120 150,240 80,200"
-             fill="#0f0f0f"/>
+        <!-- Sağ yüzey -->
+        <polygon points="160,135 240,95 240,225 160,265"
+                 fill="#070707"/>
 
-    <!-- Sağ yüz -->
-    <polygon points="150,120 220,80 220,200 150,240"
-             fill="#050505"/>
+        <!-- KISVE (altın kuşak – daha belirgin) -->
+        <rect x="98" y="120" width="124" height="14" fill="#d4af37"/>
+        <rect x="98" y="138" width="124" height="9" fill="#c9a132"/>
 
-    <!-- Altın kuşak -->
-    <rect x="95" y="110" width="110" height="14" fill="#d4af37"/>
-    <rect x="95" y="130" width="110" height="10" fill="#c9a132"/>
+        <!-- Kapı (orantılı ve merkezde) -->
+        <rect x="148" y="175" width="32" height="72" rx="2"
+              fill="#8b6b2f"/>
+        <rect x="152" y="180" width="24" height="62" rx="1.5"
+              fill="#a7843a"/>
 
-    <!-- Kapı -->
-    <rect x="135" y="160" width="30" height="70" rx="2"
-          fill="#8b6b2f"/>
-    <rect x="139" y="166" width="22" height="58" rx="1.5"
-          fill="#a7843a"/>
+        <!-- Dikiş/örtü hissi için çok hafif çizgiler -->
+        <line x1="100" y1="155" x2="220" y2="155" stroke="#ffffff" stroke-opacity="0.04"/>
+        <line x1="100" y1="165" x2="220" y2="165" stroke="#ffffff" stroke-opacity="0.03"/>
 
-    <!-- Işık vurgusu -->
-    <polygon points="85,85 145,120 145,130 85,100"
-             fill="#ffffff" opacity="0.06"/>
-</svg>
+        <!-- Işık vurgusu -->
+        <polygon points="86,102 156,136 156,146 86,116"
+                 fill="#ffffff" opacity="0.05"/>
+      </svg>
+    </div>
 
+    <!-- === SAĞ METİN === -->
+    <div class="text-box">
+      <h2>1. Âyet</h2>
+
+      <div class="ayet">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+
+      <table>
+        <tr>
+          <th>Kelime</th><th>Kök (Türkçe)</th><th>Sözlük Anlamı</th><th>Sade Türkçe Karşılığı</th>
+        </tr>
+        <tr><td>بِسْمِ</td><td>ism → ad</td><td>isimle</td><td>adı ile</td></tr>
+        <tr><td>اللَّهِ</td><td>ilâh</td><td>Allah</td><td>Allah’ın</td></tr>
+        <tr><td>الرَّحْمَٰنِ</td><td>r-ḥ-m</td><td>çok merhamet eden</td><td>Rahmân’ın</td></tr>
+        <tr><td>الرَّحِيمِ</td><td>r-ḥ-m</td><td>sürekli merhamet eden</td><td>Rahîm’in</td></tr>
+      </table>
+
+      <h2>Sade Türkçe Ayet</h2>
+      <p style="font-size:18px; text-align:center; margin-top:15px;">
+        Rahmân ve Rahîm olan Allah’ın adıyla.
+      </p>
+
+      <a class="next" href="2.html">2. Sayfaya Geç →</a>
+    </div>
+
+  </div>
 </div>
 
-<!-- ========= SAĞ: METİN ========= -->
-<div class="text-box">
-
-<h2>1. Âyet</h2>
-
-<div class="ayet">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
-
-<table>
-<tr>
-<th>Kelime</th>
-<th>Kök (Türkçe)</th>
-<th>Sözlük Anlamı</th>
-<th>Sade Türkçe Karşılığı</th>
-</tr>
-
-<tr>
-<td>بِسْمِ</td>
-<td>ism → ad, belirti</td>
-<td>isimle, adla</td>
-<td>adı ile</td>
-</tr>
-
-<tr>
-<td>اللَّهِ</td>
-<td>ilâh → yönelinen</td>
-<td>Allah</td>
-<td>Allah’ın</td>
-</tr>
-
-<tr>
-<td>الرَّحْمَٰنِ</td>
-<td>r-ḥ-m → merhamet</td>
-<td>çok merhamet eden</td>
-<td>Rahmân’ın</td>
-</tr>
-
-<tr>
-<td>الرَّحِيمِ</td>
-<td>r-ḥ-m → merhamet</td>
-<td>sürekli merhamet eden</td>
-<td>Rahîm’in</td>
-</tr>
-</table>
-
-<h2>Sade Türkçe Ayet</h2>
-<p style="font-size:18px; text-align:center; margin-top:15px;">
-    Rahmân ve Rahîm olan Allah’ın adıyla.
-</p>
-
-<a class="next" href="2.html">2. Sayfaya Geç →</a>
-
-</div>
-</div>
-</div>
-
-<div class="footer">
-© 2025 – Kur'an Kelime Kelime Anlam Çalışması
-</div>
+<div class="footer">© 2025 – Kur'an Kelime Kelime Anlam Çalışması</div>
 
 </body>
 </html>
