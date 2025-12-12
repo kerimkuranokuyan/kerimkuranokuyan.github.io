@@ -5,174 +5,197 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kur'an Kelime Kelime Anlam - Fâtiha 1</title>
 <style>
-    body {
-        font-family: "Segoe UI", sans-serif;
-        background-color: #f8f8f8;
-        margin: 0;
-        padding: 0;
-        color: #222;
-    }
-    header {
-        background: #1c3d2e;
-        color: white;
-        padding: 20px;
-        padding-left: 72px; /* ✅ SVG için solda boşluk */
-        text-align: center;
-        font-size: 24px;
-        letter-spacing: 1px;
-        position: relative;  /* ✅ SVG'yi header içinde konumlamak için */
-    }
+body {
+    font-family: "Segoe UI", sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+    color: #222;
+}
+header {
+    background: #1c3d2e;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.08);
+}
 
-    /* ✅ Sol üstte küçük Kâbe ikonu */
-    .kaaba-badge {
-        position: absolute;
-        left: 18px;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 42px;
-        height: 42px;
-        opacity: 0.95;
-    }
+/* 🔹 Ana iki kolon düzeni */
+.content-wrap {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
 
-    /* Mobilde başlık sıkışmasın */
-    @media (max-width: 480px) {
-        header {
-            padding-left: 62px;
-            font-size: 20px;
-        }
-        .kaaba-badge {
-            width: 36px;
-            height: 36px;
-            left: 14px;
-        }
-    }
+/* 🔹 Sol Kâbe alanı */
+.kaaba-box {
+    width: 260px;
+    min-width: 260px;
+    aspect-ratio: 1 / 1;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-    .container {
-        max-width: 900px;
-        margin: 40px auto;
-        padding: 20px;
-        background: white;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0,0,0,0.08);
-    }
-    h2 {
-        margin-top: 0;
-        color: #1c3d2e;
-    }
-    .ayet {
-        font-size: 32px;
-        text-align: center;
-        margin: 30px 0;
-        font-weight: bold;
-        direction: rtl;
-    }
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 20px;
-    }
-    th, td {
-        border: 1px solid #ccc;
-        padding: 10px;
-        text-align: center;
-    }
-    th {
-        background: #e2eee7;
-        font-weight: bold;
-    }
-    .footer {
-        text-align: center;
-        padding: 20px;
-        color: #555;
-        font-size: 14px;
-    }
+/* 🔹 SVG boyutu */
+.kaaba-box svg {
+    width: 200px;
+    height: 200px;
+}
 
-    .next {
-        display: block;
-        text-align: center;
-        margin: 25px auto;
-        font-size: 18px;
-        color: #1c3d2e;
-        text-decoration: none;
-        font-weight: bold;
+/* 🔹 Sağ içerik */
+.text-box {
+    flex: 1;
+}
+
+h2 {
+    margin-top: 0;
+    color: #1c3d2e;
+}
+.ayet {
+    font-size: 32px;
+    text-align: center;
+    margin: 30px 0;
+    font-weight: bold;
+    direction: rtl;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+th {
+    background: #e2eee7;
+    font-weight: bold;
+}
+.footer {
+    text-align: center;
+    padding: 20px;
+    color: #555;
+    font-size: 14px;
+}
+.next {
+    display: block;
+    text-align: center;
+    margin: 30px auto;
+    font-size: 18px;
+    color: #1c3d2e;
+    text-decoration: none;
+    font-weight: bold;
+}
+.next:hover {
+    text-decoration: underline;
+}
+
+/* 📱 Mobil uyum */
+@media (max-width: 768px) {
+    .content-wrap {
+        flex-direction: column;
+        align-items: center;
     }
-    .next:hover {
-        text-decoration: underline;
+    .kaaba-box {
+        width: 220px;
+        min-width: 220px;
     }
+}
 </style>
 </head>
 <body>
 
-<header>
-    <!-- ✅ Özgün SVG Kâbe ikonu (telif sorunu yok) -->
-    <svg class="kaaba-badge" viewBox="0 0 64 64" aria-hidden="true">
-        <!-- Gövde -->
-        <path d="M18 18 L32 10 L46 18 L46 50 L32 58 L18 50 Z" fill="#0b0b0b"/>
-        <!-- Üst yüzey (hafif aydınlık) -->
-        <path d="M18 18 L32 10 L46 18 L32 26 Z" fill="#161616"/>
-        <!-- Sağ yüzey (gölge) -->
-        <path d="M46 18 L46 50 L32 58 L32 26 Z" fill="#070707"/>
-        <!-- Altın kuşak -->
-        <path d="M20 27 H44 V31 H20 Z" fill="#d7b14b"/>
-        <path d="M20 33 H44 V35.8 H20 Z" fill="#caa23e" opacity="0.9"/>
-        <!-- Kapı -->
-        <path d="M29.5 34.5 H34.5 V50.5 H29.5 Z" fill="#8b6b2f"/>
-        <path d="M30.8 36 H33.2 V49 H30.8 Z" fill="#a7843a" opacity="0.75"/>
-        <!-- Hafif parıltı -->
-        <circle cx="24" cy="22" r="1.6" fill="#ffffff" opacity="0.22"/>
-    </svg>
-
-    Kur'an Kelime Kelime Anlam – Fâtiha Sûresi
-</header>
+<header>Kur'an Kelime Kelime Anlam – Fâtiha Sûresi</header>
 
 <div class="container">
-    <h2>1. Âyet</h2>
 
-    <div class="ayet">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+<div class="content-wrap">
 
-    <table>
-        <tr>
-            <th>Kelime</th>
-            <th>Kök (Türkçe)</th>
-            <th>Sözlük Anlamı</th>
-            <th>Sade Türkçe Karşılığı</th>
-        </tr>
-        <tr>
-            <td>بِسْمِ</td>
-            <td>ism → ad, belirti</td>
-            <td>isimle, adla</td>
-            <td>adı ile</td>
-        </tr>
-        <tr>
-            <td>اللَّهِ</td>
-            <td>ilâh → yönelinen</td>
-            <td>Allah</td>
-            <td>Allah’ın</td>
-        </tr>
-        <tr>
-            <td>الرَّحْمَٰنِ</td>
-            <td>r-ḥ-m → merhamet</td>
-            <td>çok merhamet eden</td>
-            <td>Rahmân’ın</td>
-        </tr>
-        <tr>
-            <td>الرَّحِيمِ</td>
-            <td>r-ḥ-m → merhamet</td>
-            <td>sürekli merhamet eden</td>
-            <td>Rahîm’in</td>
-        </tr>
-    </table>
+<!-- 🔳 SOLDA BÜYÜK KÂBE -->
+<div class="kaaba-box">
+<svg viewBox="0 0 200 200" aria-hidden="true">
+    <!-- Gövde -->
+    <polygon points="40,60 100,30 160,60 160,160 100,190 40,160" fill="#0b0b0b"/>
+    <!-- Üst -->
+    <polygon points="40,60 100,30 160,60 100,90" fill="#1a1a1a"/>
+    <!-- Sağ yüz -->
+    <polygon points="160,60 160,160 100,190 100,90" fill="#050505"/>
+    <!-- Altın kuşak -->
+    <rect x="55" y="85" width="90" height="10" fill="#d7b14b"/>
+    <rect x="55" y="100" width="90" height="7" fill="#caa23e"/>
+    <!-- Kapı -->
+    <rect x="88" y="110" width="24" height="45" fill="#8b6b2f"/>
+    <rect x="92" y="115" width="16" height="35" fill="#a7843a"/>
+</svg>
+</div>
 
-    <h2>Sade Türkçe Ayet</h2>
-    <p style="font-size:18px; text-align:center; margin-top:15px;">
-        Rahmân ve Rahîm olan Allah’ın adıyla.
-    </p>
+<!-- 🔹 SAĞ METİN -->
+<div class="text-box">
 
-    <a class="next" href="2.html">2. Sayfaya Geç →</a>
+<h2>1. Âyet</h2>
+
+<div class="ayet">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+
+<table>
+<tr>
+<th>Kelime</th>
+<th>Kök (Türkçe)</th>
+<th>Sözlük Anlamı</th>
+<th>Sade Türkçe Karşılığı</th>
+</tr>
+<tr>
+<td>بِسْمِ</td>
+<td>ism → ad</td>
+<td>isimle</td>
+<td>adı ile</td>
+</tr>
+<tr>
+<td>اللَّهِ</td>
+<td>ilâh</td>
+<td>Allah</td>
+<td>Allah’ın</td>
+</tr>
+<tr>
+<td>الرَّحْمَٰنِ</td>
+<td>r-ḥ-m</td>
+<td>çok merhamet eden</td>
+<td>Rahmân’ın</td>
+</tr>
+<tr>
+<td>الرَّحِيمِ</td>
+<td>r-ḥ-m</td>
+<td>sürekli merhamet eden</td>
+<td>Rahîm’in</td>
+</tr>
+</table>
+
+<h2>Sade Türkçe Ayet</h2>
+<p style="font-size:18px; text-align:center; margin-top:15px;">
+Rahmân ve Rahîm olan Allah’ın adıyla.
+</p>
+
+<a class="next" href="2.html">2. Sayfaya Geç →</a>
+
+</div>
+</div>
 </div>
 
 <div class="footer">
-    © 2025 – Kur'an Kelime Kelime Anlam Çalışması
+© 2025 – Kur'an Kelime Kelime Anlam Çalışması
 </div>
 
 </body>
