@@ -4,6 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kur'an Kelime Kelime Anlam - Fâtiha 7</title>
+
+<!-- ✅ Ortak Navbar CSS -->
+<link rel="stylesheet" href="common/navbar.css">
+
 <style>
     body {
         font-family: "Segoe UI", sans-serif;
@@ -11,6 +15,7 @@
         margin: 0;
         padding: 0;
         color: #222;
+        padding-bottom: 92px; /* ✅ sabit navbar boşluğu */
     }
     header {
         background: #1c3d2e;
@@ -61,12 +66,13 @@
         font-size: 14px;
     }
 
+    /* İstersen kalsın – navbar zaten hızlı geçiş sağlıyor */
     .nav-links {
         text-align: center;
         margin-top: 30px;
         font-size: 18px;
     }
-    .nav-links a {
+    .nav-links a, .nav-links span {
         margin: 0 15px;
         color: #1c3d2e;
         text-decoration: none;
@@ -158,7 +164,6 @@
         Nimet verdiklerinin yoluna; gazaba uğramış olanların ve sapmışların yoluna değil.
     </p>
 
-    <!-- Navigasyon -->
     <div class="nav-links">
         <a href="6.html">← 6. Sayfa</a>
         <span>Fâtiha Sûresi Tamamlandı</span>
@@ -169,6 +174,10 @@
 <div class="footer">
     © 2025 – Kur'an Kelime Kelime Anlam Çalışması
 </div>
+
+<!-- ✅ Ortak Navbar -->
+<div id="navbar-host"></div>
+<script src="common/navbar.js"></script>
 
 </body>
 </html>
