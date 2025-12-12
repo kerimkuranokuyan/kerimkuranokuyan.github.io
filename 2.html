@@ -4,6 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kur'an Kelime Kelime Anlam - Fâtiha 2</title>
+
+<!-- ✅ Ortak Navbar CSS -->
+<link rel="stylesheet" href="common/navbar.css">
+
 <style>
     body {
         font-family: "Segoe UI", sans-serif;
@@ -11,6 +15,7 @@
         margin: 0;
         padding: 0;
         color: #222;
+        padding-bottom: 92px; /* ✅ alttaki navbar içeriği kapatmasın */
     }
     header {
         background: #1c3d2e;
@@ -123,7 +128,7 @@
         Övgü, âlemlerin Rabbi olan Allah’a aittir.
     </p>
 
-    <!-- Navigasyon Bağlantıları -->
+    <!-- İstersen kalsın: (Navbar zaten hızlı geçiş sağlıyor) -->
     <div class="nav-links">
         <a href="index.html">← 1. Sayfa</a>
         <a href="3.html">3. Sayfa →</a>
@@ -134,6 +139,10 @@
 <div class="footer">
     © 2025 – Kur'an Kelime Kelime Anlam Çalışması
 </div>
+
+<!-- ✅ Ortak Navbar -->
+<div id="navbar-host"></div>
+<script src="common/navbar.js"></script>
 
 </body>
 </html>
