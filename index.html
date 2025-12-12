@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kur'an Kelime Kelime Anlam - Fâtiha 1</title>
+
 <style>
 body {
     font-family: "Segoe UI", sans-serif;
@@ -12,6 +13,7 @@ body {
     padding: 0;
     color: #222;
 }
+
 header {
     background: #1c3d2e;
     color: white;
@@ -20,42 +22,43 @@ header {
     font-size: 24px;
     letter-spacing: 1px;
 }
+
 .container {
-    max-width: 1100px;
+    max-width: 1150px;
     margin: 40px auto;
-    padding: 20px;
+    padding: 25px;
     background: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.08);
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.08);
 }
 
-/* 🔹 Ana iki kolon düzeni */
+/* ===== İKİ KOLON ===== */
 .content-wrap {
     display: flex;
-    gap: 30px;
+    gap: 32px;
     align-items: flex-start;
 }
 
-/* 🔹 Sol Kâbe alanı */
+/* ===== SOLDA KÂBE ===== */
 .kaaba-box {
-    width: 260px;
-    min-width: 260px;
+    width: 300px;
+    min-width: 300px;
     aspect-ratio: 1 / 1;
     border: 1px solid #ddd;
-    border-radius: 10px;
-    background: #fff;
+    border-radius: 14px;
+    background: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-/* 🔹 SVG boyutu */
+/* SVG boyutu */
 .kaaba-box svg {
-    width: 200px;
-    height: 200px;
+    width: 260px;
+    height: 260px;
 }
 
-/* 🔹 Sağ içerik */
+/* ===== SAĞ METİN ===== */
 .text-box {
     flex: 1;
 }
@@ -64,6 +67,7 @@ h2 {
     margin-top: 0;
     color: #1c3d2e;
 }
+
 .ayet {
     font-size: 32px;
     text-align: center;
@@ -71,26 +75,31 @@ h2 {
     font-weight: bold;
     direction: rtl;
 }
+
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
 }
+
 th, td {
     border: 1px solid #ccc;
     padding: 10px;
     text-align: center;
 }
+
 th {
     background: #e2eee7;
     font-weight: bold;
 }
+
 .footer {
     text-align: center;
     padding: 20px;
     color: #555;
     font-size: 14px;
 }
+
 .next {
     display: block;
     text-align: center;
@@ -100,23 +109,29 @@ th {
     text-decoration: none;
     font-weight: bold;
 }
+
 .next:hover {
     text-decoration: underline;
 }
 
-/* 📱 Mobil uyum */
+/* ===== MOBİL ===== */
 @media (max-width: 768px) {
     .content-wrap {
         flex-direction: column;
         align-items: center;
     }
     .kaaba-box {
-        width: 220px;
-        min-width: 220px;
+        width: 240px;
+        min-width: 240px;
+    }
+    .kaaba-box svg {
+        width: 210px;
+        height: 210px;
     }
 }
 </style>
 </head>
+
 <body>
 
 <header>Kur'an Kelime Kelime Anlam – Fâtiha Sûresi</header>
@@ -125,25 +140,40 @@ th {
 
 <div class="content-wrap">
 
-<!-- 🔳 SOLDA BÜYÜK KÂBE -->
+<!-- ========= SOL: NET KÂBE ========= -->
 <div class="kaaba-box">
-<svg viewBox="0 0 200 200" aria-hidden="true">
-    <!-- Gövde -->
-    <polygon points="40,60 100,30 160,60 160,160 100,190 40,160" fill="#0b0b0b"/>
-    <!-- Üst -->
-    <polygon points="40,60 100,30 160,60 100,90" fill="#1a1a1a"/>
+
+<svg viewBox="0 0 300 300" aria-hidden="true">
+    <!-- Üst yüzey -->
+    <polygon points="80,80 150,40 220,80 150,120"
+             fill="#1a1a1a"/>
+
+    <!-- Sol yüz -->
+    <polygon points="80,80 150,120 150,240 80,200"
+             fill="#0f0f0f"/>
+
     <!-- Sağ yüz -->
-    <polygon points="160,60 160,160 100,190 100,90" fill="#050505"/>
+    <polygon points="150,120 220,80 220,200 150,240"
+             fill="#050505"/>
+
     <!-- Altın kuşak -->
-    <rect x="55" y="85" width="90" height="10" fill="#d7b14b"/>
-    <rect x="55" y="100" width="90" height="7" fill="#caa23e"/>
+    <rect x="95" y="110" width="110" height="14" fill="#d4af37"/>
+    <rect x="95" y="130" width="110" height="10" fill="#c9a132"/>
+
     <!-- Kapı -->
-    <rect x="88" y="110" width="24" height="45" fill="#8b6b2f"/>
-    <rect x="92" y="115" width="16" height="35" fill="#a7843a"/>
+    <rect x="135" y="160" width="30" height="70" rx="2"
+          fill="#8b6b2f"/>
+    <rect x="139" y="166" width="22" height="58" rx="1.5"
+          fill="#a7843a"/>
+
+    <!-- Işık vurgusu -->
+    <polygon points="85,85 145,120 145,130 85,100"
+             fill="#ffffff" opacity="0.06"/>
 </svg>
+
 </div>
 
-<!-- 🔹 SAĞ METİN -->
+<!-- ========= SAĞ: METİN ========= -->
 <div class="text-box">
 
 <h2>1. Âyet</h2>
@@ -157,27 +187,31 @@ th {
 <th>Sözlük Anlamı</th>
 <th>Sade Türkçe Karşılığı</th>
 </tr>
+
 <tr>
 <td>بِسْمِ</td>
-<td>ism → ad</td>
-<td>isimle</td>
+<td>ism → ad, belirti</td>
+<td>isimle, adla</td>
 <td>adı ile</td>
 </tr>
+
 <tr>
 <td>اللَّهِ</td>
-<td>ilâh</td>
+<td>ilâh → yönelinen</td>
 <td>Allah</td>
 <td>Allah’ın</td>
 </tr>
+
 <tr>
 <td>الرَّحْمَٰنِ</td>
-<td>r-ḥ-m</td>
+<td>r-ḥ-m → merhamet</td>
 <td>çok merhamet eden</td>
 <td>Rahmân’ın</td>
 </tr>
+
 <tr>
 <td>الرَّحِيمِ</td>
-<td>r-ḥ-m</td>
+<td>r-ḥ-m → merhamet</td>
 <td>sürekli merhamet eden</td>
 <td>Rahîm’in</td>
 </tr>
@@ -185,7 +219,7 @@ th {
 
 <h2>Sade Türkçe Ayet</h2>
 <p style="font-size:18px; text-align:center; margin-top:15px;">
-Rahmân ve Rahîm olan Allah’ın adıyla.
+    Rahmân ve Rahîm olan Allah’ın adıyla.
 </p>
 
 <a class="next" href="2.html">2. Sayfaya Geç →</a>
