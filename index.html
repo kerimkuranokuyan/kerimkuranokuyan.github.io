@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kur'an Kelime Kelime Anlam - Fâtiha 1</title>
 
+<!-- ✅ Ortak Navbar CSS -->
+<link rel="stylesheet" href="common/navbar.css">
+
 <style>
 body {
   font-family: "Segoe UI", sans-serif;
@@ -77,69 +80,6 @@ th{ background:#e2eee7; font-weight:bold; }
   .content-wrap{ flex-direction:column; align-items:center; }
   .kaaba-box{ width:260px; min-width:260px; }
   .kaaba-box svg{ width:230px; height:230px; }
-}
-
-/* ===========================
-   ✅ Sabit Sure/Ayet Seçim Barı
-   =========================== */
-.navbar-fixed {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(255,255,255,0.96);
-  border-top: 1px solid #ddd;
-  box-shadow: 0 -8px 18px rgba(0,0,0,0.08);
-  padding: 12px 12px;
-  z-index: 9999;
-  backdrop-filter: blur(6px);
-}
-
-.navbar-inner{
-  max-width: 1150px;
-  margin: 0 auto;
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.nav-title{
-  font-weight: 700;
-  color:#1c3d2e;
-  margin-right: 6px;
-}
-
-.navbar-inner select{
-  padding: 10px 12px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  font-size: 15px;
-  min-width: 180px;
-  background:#fff;
-}
-
-.navbar-inner button{
-  padding: 10px 14px;
-  border: 1px solid #1c3d2e;
-  background:#1c3d2e;
-  color:#fff;
-  border-radius: 10px;
-  font-size: 15px;
-  cursor: pointer;
-  font-weight: 700;
-}
-.navbar-inner button:hover{
-  opacity: 0.95;
-}
-
-.nav-hint{
-  width:100%;
-  text-align:center;
-  font-size: 12px;
-  color:#666;
-  margin-top: 2px;
 }
 </style>
 </head>
@@ -239,59 +179,9 @@ th{ background:#e2eee7; font-weight:bold; }
 
 <div class="footer">© 2025 – Kur'an Kelime Kelime Anlam Çalışması</div>
 
-<!-- ✅ Sabit sure/ayet seçimi -->
-<div class="navbar-fixed">
-  <div class="navbar-inner">
-    <span class="nav-title">Hızlı Geçiş:</span>
-
-    <select id="surahSelect" aria-label="Sure seç">
-      <option value="fatiha" selected>Fâtiha</option>
-      <!-- İleride: <option value="bakara">Bakara</option> ... -->
-    </select>
-
-    <select id="ayahSelect" aria-label="Ayet seç">
-      <option value="1" selected>1. Âyet</option>
-      <option value="2">2. Âyet</option>
-      <option value="3">3. Âyet</option>
-      <option value="4">4. Âyet</option>
-      <option value="5">5. Âyet</option>
-      <option value="6">6. Âyet</option>
-      <option value="7">7. Âyet</option>
-    </select>
-
-    <button id="goBtn" type="button">Git</button>
-
-    <div class="nav-hint">Fâtiha seçili — Âyet seçip “Git”e basınca doğrudan o sayfaya gider.</div>
-  </div>
-</div>
-
-<script>
-(function () {
-  const surahSelect = document.getElementById("surahSelect");
-  const ayahSelect  = document.getElementById("ayahSelect");
-  const goBtn       = document.getElementById("goBtn");
-
-  function targetUrl(surah, ayah) {
-    // Şimdilik sadece Fâtiha var
-    if (surah === "fatiha") {
-      if (ayah === "1") return "index.html";
-      return ayah + ".html"; // 2..7 => 2.html..7.html
-    }
-    return "index.html";
-  }
-
-  function go() {
-    const surah = surahSelect.value;
-    const ayah  = ayahSelect.value;
-    window.location.href = targetUrl(surah, ayah);
-  }
-
-  goBtn.addEventListener("click", go);
-
-  // İstersen seçer seçmez gitsin:
-  // ayahSelect.addEventListener("change", go);
-})();
-</script>
+<!-- ✅ Ortak Navbar (tek yerden yönetilecek) -->
+<div id="navbar-host"></div>
+<script src="common/navbar.js"></script>
 
 </body>
 </html>
