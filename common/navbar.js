@@ -13,7 +13,7 @@
   const goBtn       = document.getElementById("goBtn");
 
   /* =========================
-     SÛRE / AYET TANIMLARI
+     SÛRE TANIMLARI
      ========================= */
   const surahs = {
     fatiha: {
@@ -79,8 +79,17 @@
     }
   }
 
+  // İlk yükleme
   fillAyahs();
   ayahSelect.value = currentAyah;
+
+  /* =========================
+     SÛRE DEĞİŞİNCE AYETLERİ YENİLE
+     ========================= */
+  surahSelect.addEventListener("change", function () {
+    fillAyahs();
+    ayahSelect.value = "1";
+  });
 
   /* =========================
      YÖNLENDİRME
@@ -106,6 +115,4 @@
 
   goBtn.addEventListener("click", go);
 
-  // İstersen otomatik gidiş:
-  // ayahSelect.addEventListener("change", go);
 })();
