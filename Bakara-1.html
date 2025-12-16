@@ -15,7 +15,7 @@
         margin: 0;
         padding: 0;
         color: #222;
-        padding-bottom: 92px; /* ✅ sabit sure/ayet barı boşluğu */
+        padding-bottom: 92px; /* ✅ sabit navbar boşluğu */
     }
     header {
         background: #1c3d2e;
@@ -75,6 +75,22 @@
         color: #555;
         font-size: 14px;
     }
+
+    /* ✅ İleri / geri linkler */
+    .nav-links {
+        text-align: center;
+        margin-top: 30px;
+        font-size: 18px;
+    }
+    .nav-links a {
+        margin: 0 18px;
+        color: #1c3d2e;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    .nav-links a:hover {
+        text-decoration: underline;
+    }
 </style>
 </head>
 <body>
@@ -109,13 +125,19 @@
     <p style="font-size:18px; text-align:center; margin-top:15px;">
         Elif-Lâm-Mîm.
     </p>
+
+    <!-- ✅ Navigasyon -->
+    <div class="nav-links">
+        <a href="7.html">← Fâtiha’ya Dön (7. Âyet)</a>
+        <a href="Bakara-2.html">Bakara 2 →</a>
+    </div>
 </div>
 
 <div class="footer">
     © 2025 – Kur'an Kelime Kelime Anlam Çalışması
 </div>
 
-<!-- ✅ Ortak Sûre / Âyet Seçim Barı -->
+<!-- ✅ Ortak Navbar -->
 <div id="navbar-host"></div>
 <script src="common/navbar.js"></script>
 
