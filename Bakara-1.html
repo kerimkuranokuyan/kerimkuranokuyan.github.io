@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kur'an Kelime Kelime Anlam - Bakara 1</title>
 
-<!-- ✅ Ortak Navbar CSS -->
 <link rel="stylesheet" href="common/navbar.css">
 
 <style>
@@ -14,7 +13,7 @@ body{
   background:#f8f8f8;
   margin:0;
   color:#222;
-  padding-bottom:92px; /* sabit navbar boşluğu */
+  padding-bottom:92px;
 }
 header{
   background:#1c3d2e;
@@ -22,39 +21,41 @@ header{
   padding:20px;
   text-align:center;
   font-size:24px;
-  letter-spacing:1px;
 }
 .container{
   max-width:900px;
   margin:40px auto;
-  padding:20px;
+  padding:25px;
   background:#fff;
-  border-radius:10px;
-  box-shadow:0 0 10px rgba(0,0,0,.08);
+  border-radius:12px;
+  box-shadow:0 0 12px rgba(0,0,0,.08);
 }
-h2{ color:#1c3d2e; margin-top:0; }
+
+/* Kâbe */
+.kaaba-box{
+  display:flex;
+  justify-content:center;
+  margin-bottom:30px;
+}
+.kaaba-box svg{
+  width:280px;
+  height:auto;
+}
+
+h2{color:#1c3d2e;margin-top:0;}
 .ayet{
-  font-size:56px;
+  font-size:48px;
   text-align:center;
   margin:30px 0;
   font-weight:bold;
   direction:rtl;
-  letter-spacing:8px;
+  letter-spacing:6px;
 }
-table{
-  width:100%;
-  border-collapse:collapse;
-  margin-top:20px;
-}
-th,td{
-  border:1px solid #ccc;
-  padding:10px;
-  text-align:center;
-}
-th{
-  background:#e2eee7;
-  font-weight:bold;
-}
+
+table{width:100%;border-collapse:collapse;}
+th,td{border:1px solid #ccc;padding:10px;text-align:center;}
+th{background:#e2eee7;}
+
 .note{
   margin-top:14px;
   padding:12px 14px;
@@ -63,20 +64,35 @@ th{
   border-radius:6px;
   font-size:15px;
 }
+
 .nav-links{
   text-align:center;
-  margin:34px 0 10px;
+  margin-top:30px;
   font-size:18px;
 }
 .nav-links a{
-  margin:0 18px;
+  margin:0 15px;
   color:#1c3d2e;
   text-decoration:none;
   font-weight:bold;
 }
-.nav-links a:hover{
-  text-decoration:underline;
+.nav-links a:hover{ text-decoration:underline; }
+
+/* Eklenen sure bloğu */
+.sure{
+  margin-top:35px;
+  padding:22px;
+  background:#f6f9f7;
+  border-left:6px solid #1c3d2e;
+  border-radius:10px;
 }
+.sure h2{ text-align:center; }
+.sure p{
+  margin:6px 0;
+  font-size:16px;
+  line-height:1.6;
+}
+
 .footer{
   text-align:center;
   padding:20px;
@@ -92,6 +108,21 @@ th{
 
 <div class="container">
 
+  <!-- ✅ KÂBE (KAPILI, BOZULMADAN) -->
+  <div class="kaaba-box">
+    <svg viewBox="0 0 320 320" aria-hidden="true">
+      <rect width="320" height="320" fill="#fff"/>
+      <ellipse cx="165" cy="282" rx="110" ry="20" fill="#000" opacity="0.10"/>
+      <polygon points="70,110 165,60 255,110 165,160" fill="#232323"/>
+      <polygon points="70,110 165,160 165,270 70,220" fill="#0e0e0e"/>
+      <polygon points="165,160 255,110 255,220 165,270" fill="#050505"/>
+      <rect x="100" y="142" width="130" height="16" fill="#d8b24a"/>
+      <!-- Kapı -->
+      <polygon points="150,190 180,190 180,258 150,245" fill="#8b6b2f"/>
+      <polygon points="154,195 176,195 176,252 154,240" fill="#a7843a"/>
+    </svg>
+  </div>
+
   <h2>1. Âyet</h2>
 
   <div class="ayet">الم</div>
@@ -101,11 +132,11 @@ th{
       <th>Kelime</th>
       <th>Kök (Türkçe)</th>
       <th>Sözlük Anlamı</th>
-      <th>Sade Türkçe Karşılığı</th>
+      <th>Sade Türkçe</th>
     </tr>
     <tr>
-      <td>الم (Elif-Lâm-Mîm)</td>
-      <td>— (hurûf)</td>
+      <td>الم</td>
+      <td>—</td>
       <td>kesik harfler</td>
       <td>Elif-Lâm-Mîm</td>
     </tr>
@@ -115,24 +146,45 @@ th{
     Bu ifade Mushaf’ta üç ayrı harf olarak yer alır.
   </div>
 
-  <h2>Sade Türkçe Ayet</h2>
-  <p style="font-size:18px;text-align:center;margin-top:15px;">
+  <p style="text-align:center;font-size:18px;margin-top:15px;">
     Elif-Lâm-Mîm.
   </p>
 
-  <!-- ✅ Sayfa içi geçiş -->
+  <!-- ✅ SAYFA GEÇİŞ -->
   <div class="nav-links">
-    <a href="7.html">← Fâtiha 7 (Önceki)</a>
+    <a href="7.html">← Fâtiha’ya Dön</a>
     <a href="Bakara-2.html">Bakara 2 →</a>
   </div>
 
+  <!-- ✅ EKLENEN METİN (SENİN GÖNDERDİĞİN) -->
+  <section class="sure" id="bakara-1-20">
+    <h2>Bakara Sûresi (1-20)</h2>
+    <p><strong>1.</strong> Elif Lâm Mîm.</p>
+    <p><strong>2.</strong> İşte bu Kitap; onda hiçbir şüphe yoktur. Sakınanlar için bir yol göstericidir.</p>
+    <p><strong>3.</strong> Onlar, görünmeyene inanırlar; salâtı ayakta tutarlar ve kendilerine rızık olarak verdiklerimizden harcarlar.</p>
+    <p><strong>4.</strong> Onlar, sana indirilene ve senden önce indirilene inanırlar; âhirete de kesin olarak inanırlar.</p>
+    <p><strong>5.</strong> İşte onlar, Rablerinden bir yol gösterme üzerindedirler; işte onlar kurtuluşa erenlerdir.</p>
+    <p><strong>6.</strong> İnkâr edenlere gelince; onları uyarman da uyarmaman da onlar için birdir; inanmazlar.</p>
+    <p><strong>7.</strong> Allah, onların kalplerini ve işitmelerini mühürlemiştir; gözlerinin üzerinde de bir perde vardır. Onlar için büyük bir azap vardır.</p>
+    <p><strong>8.</strong> İnsanlardan bazıları vardır ki “Allah’a ve âhiret gününe inandık” derler; oysa onlar inanmış değillerdir.</p>
+    <p><strong>9.</strong> Allah’ı ve iman edenleri aldatmaya çalışırlar; oysa kendilerinden başkasını aldatmazlar ama farkında değillerdir.</p>
+    <p><strong>10.</strong> Kalplerinde bir hastalık vardır; Allah da onların hastalığını artırmıştır. Yalan söylemeleri sebebiyle onlar için acı bir azap vardır.</p>
+    <p><strong>11.</strong> Onlara “Yeryüzünde bozgunculuk yapmayın” denildiğinde, “Biz ancak ıslah edicileriz” derler.</p>
+    <p><strong>12.</strong> Dikkat edin! Asıl bozguncular onlardır; fakat farkında değillerdir.</p>
+    <p><strong>13.</strong> Onlara “İnsanların iman ettiği gibi iman edin” denildiğinde, “Biz de akılsızların iman ettiği gibi mi iman edelim?” derler.</p>
+    <p><strong>14.</strong> İman edenlerle karşılaştıklarında “İman ettik” derler; şeytanlarıyla baş başa kaldıklarında ise “Biz sizinleyiz” derler.</p>
+    <p><strong>15.</strong> Allah onlarla alay eder.</p>
+    <p><strong>16.</strong> İşte onlar doğru yol karşılığında sapıklığı satın alanlardır.</p>
+    <p><strong>17.</strong> Onların durumu ateş yakan kimse gibidir.</p>
+    <p><strong>18.</strong> Sağırdırlar, dilsizdirler, kördürler.</p>
+    <p><strong>19.</strong> Gökten boşanan yağmur gibidir.</p>
+    <p><strong>20.</strong> Allah her şeye gücü yetendir.</p>
+  </section>
+
 </div>
 
-<div class="footer">
-  © 2025 – Kur'an Kelime Kelime Anlam Çalışması
-</div>
+<div class="footer">© 2025 – Kur'an Kelime Kelime Anlam Çalışması</div>
 
-<!-- ✅ Ortak Navbar -->
 <div id="navbar-host"></div>
 <script src="common/navbar.js"></script>
 
