@@ -21,50 +21,46 @@ header{
   padding:20px;
   text-align:center;
   font-size:24px;
+  letter-spacing:1px;
 }
 .container{
   max-width:900px;
   margin:40px auto;
-  padding:25px;
+  padding:20px;
   background:#fff;
-  border-radius:12px;
-  box-shadow:0 0 12px rgba(0,0,0,.08);
+  border-radius:10px;
+  box-shadow:0 0 10px rgba(0,0,0,.08);
 }
-
-/* Kâbe */
-.kaaba-box{
-  display:flex;
-  justify-content:center;
-  margin-bottom:30px;
-}
-.kaaba-box svg{
-  width:280px;
-  height:auto;
-}
-
 h2{color:#1c3d2e;margin-top:0;}
 .ayet{
-  font-size:48px;
+  font-size:56px;
   text-align:center;
   margin:30px 0;
   font-weight:bold;
   direction:rtl;
-  letter-spacing:6px;
+  letter-spacing:8px;
 }
-
-table{width:100%;border-collapse:collapse;}
-th,td{border:1px solid #ccc;padding:10px;text-align:center;}
+table{
+  width:100%;
+  border-collapse:collapse;
+  margin-top:20px;
+}
+th,td{
+  border:1px solid #ccc;
+  padding:10px;
+  text-align:center;
+}
 th{background:#e2eee7;}
-
 .note{
   margin-top:14px;
   padding:12px 14px;
   background:#f3f7f4;
   border-left:4px solid #1c3d2e;
   border-radius:6px;
+  color:#2a2a2a;
   font-size:15px;
+  line-height:1.5;
 }
-
 .nav-links{
   text-align:center;
   margin-top:30px;
@@ -78,26 +74,30 @@ th{background:#e2eee7;}
 }
 .nav-links a:hover{ text-decoration:underline; }
 
-/* Eklenen sure bloğu */
-.sure{
-  margin-top:35px;
-  padding:22px;
-  background:#f6f9f7;
-  border-left:6px solid #1c3d2e;
-  border-radius:10px;
-}
-.sure h2{ text-align:center; }
-.sure p{
-  margin:6px 0;
-  font-size:16px;
-  line-height:1.6;
-}
-
 .footer{
   text-align:center;
   padding:20px;
   color:#555;
   font-size:14px;
+}
+
+/* Eklenen uzun metin bölüm stili */
+.sure{
+  margin-top:40px;
+  padding:22px;
+  background:#f6f9f7;
+  border-left:6px solid #1c3d2e;
+  border-radius:10px;
+}
+.sure h2{
+  margin-top:0;
+  text-align:center;
+  color:#1c3d2e;
+}
+.sure p{
+  margin:6px 0;
+  font-size:16px;
+  line-height:1.6;
 }
 </style>
 </head>
@@ -108,21 +108,6 @@ th{background:#e2eee7;}
 
 <div class="container">
 
-  <!-- ✅ KÂBE (KAPILI, BOZULMADAN) -->
-  <div class="kaaba-box">
-    <svg viewBox="0 0 320 320" aria-hidden="true">
-      <rect width="320" height="320" fill="#fff"/>
-      <ellipse cx="165" cy="282" rx="110" ry="20" fill="#000" opacity="0.10"/>
-      <polygon points="70,110 165,60 255,110 165,160" fill="#232323"/>
-      <polygon points="70,110 165,160 165,270 70,220" fill="#0e0e0e"/>
-      <polygon points="165,160 255,110 255,220 165,270" fill="#050505"/>
-      <rect x="100" y="142" width="130" height="16" fill="#d8b24a"/>
-      <!-- Kapı -->
-      <polygon points="150,190 180,190 180,258 150,245" fill="#8b6b2f"/>
-      <polygon points="154,195 176,195 176,252 154,240" fill="#a7843a"/>
-    </svg>
-  </div>
-
   <h2>1. Âyet</h2>
 
   <div class="ayet">الم</div>
@@ -132,33 +117,35 @@ th{background:#e2eee7;}
       <th>Kelime</th>
       <th>Kök (Türkçe)</th>
       <th>Sözlük Anlamı</th>
-      <th>Sade Türkçe</th>
+      <th>Sade Türkçe Karşılığı</th>
     </tr>
     <tr>
-      <td>الم</td>
-      <td>—</td>
-      <td>kesik harfler</td>
+      <td>الم (Alif-Lâm-Mîm)</td>
+      <td>— (hurûf/harfler)</td>
+      <td>harfler (kesik harfler)</td>
       <td>Elif-Lâm-Mîm</td>
     </tr>
   </table>
 
   <div class="note">
-    Bu ifade Mushaf’ta üç ayrı harf olarak yer alır.
+    Bu ifade tek “kelime” gibi yazılsa da Mushaf’ta üç harf olarak yer alır.
   </div>
 
-  <p style="text-align:center;font-size:18px;margin-top:15px;">
+  <h2>Sade Türkçe Ayet</h2>
+  <p style="font-size:18px; text-align:center; margin-top:15px;">
     Elif-Lâm-Mîm.
   </p>
 
-  <!-- ✅ SAYFA GEÇİŞ -->
+  <!-- Navigasyon -->
   <div class="nav-links">
     <a href="7.html">← Fâtiha’ya Dön</a>
     <a href="Bakara-2.html">Bakara 2 →</a>
   </div>
 
-  <!-- ✅ EKLENEN METİN (SENİN GÖNDERDİĞİN) -->
+  <!-- ✅ SENİN GÖNDERDİĞİN KOD: EKSİKSİZ / KISALTMASIZ -->
   <section class="sure" id="bakara-1-20">
     <h2>Bakara Sûresi (1-20)</h2>
+
     <p><strong>1.</strong> Elif Lâm Mîm.</p>
     <p><strong>2.</strong> İşte bu Kitap; onda hiçbir şüphe yoktur. Sakınanlar için bir yol göstericidir.</p>
     <p><strong>3.</strong> Onlar, görünmeyene inanırlar; salâtı ayakta tutarlar ve kendilerine rızık olarak verdiklerimizden harcarlar.</p>
@@ -171,14 +158,14 @@ th{background:#e2eee7;}
     <p><strong>10.</strong> Kalplerinde bir hastalık vardır; Allah da onların hastalığını artırmıştır. Yalan söylemeleri sebebiyle onlar için acı bir azap vardır.</p>
     <p><strong>11.</strong> Onlara “Yeryüzünde bozgunculuk yapmayın” denildiğinde, “Biz ancak ıslah edicileriz” derler.</p>
     <p><strong>12.</strong> Dikkat edin! Asıl bozguncular onlardır; fakat farkında değillerdir.</p>
-    <p><strong>13.</strong> Onlara “İnsanların iman ettiği gibi iman edin” denildiğinde, “Biz de akılsızların iman ettiği gibi mi iman edelim?” derler.</p>
-    <p><strong>14.</strong> İman edenlerle karşılaştıklarında “İman ettik” derler; şeytanlarıyla baş başa kaldıklarında ise “Biz sizinleyiz” derler.</p>
-    <p><strong>15.</strong> Allah onlarla alay eder.</p>
-    <p><strong>16.</strong> İşte onlar doğru yol karşılığında sapıklığı satın alanlardır.</p>
-    <p><strong>17.</strong> Onların durumu ateş yakan kimse gibidir.</p>
-    <p><strong>18.</strong> Sağırdırlar, dilsizdirler, kördürler.</p>
-    <p><strong>19.</strong> Gökten boşanan yağmur gibidir.</p>
-    <p><strong>20.</strong> Allah her şeye gücü yetendir.</p>
+    <p><strong>13.</strong> Onlara “İnsanların iman ettiği gibi iman edin” denildiğinde, “Biz de akılsızların iman ettiği gibi mi iman edelim?” derler. Dikkat edin! Asıl akılsızlar onlardır; fakat bilmezler.</p>
+    <p><strong>14.</strong> İman edenlerle karşılaştıklarında “İman ettik” derler; şeytanlarıyla baş başa kaldıklarında ise “Biz sizinleyiz, biz sadece alay ediyoruz” derler.</p>
+    <p><strong>15.</strong> Allah onlarla alay eder ve azgınlıkları içinde bocalayıp durmalarına süre tanır.</p>
+    <p><strong>16.</strong> İşte onlar, doğru yol karşılığında sapıklığı satın alanlardır; ticaretleri kazanç getirmemiştir ve doğru yolu da bulamamışlardır.</p>
+    <p><strong>17.</strong> Onların durumu, bir ateş yakan kimsenin durumuna benzer; ateş çevresini aydınlatınca Allah onların ışığını giderir ve onları karanlıklar içinde bırakır; artık göremezler.</p>
+    <p><strong>18.</strong> Sağırdırlar, dilsizdirler, kördürler; bu yüzden geri dönmezler.</p>
+    <p><strong>19.</strong> Ya da onların durumu, gökten boşanan bir yağmura benzer; onda karanlıklar, gök gürültüsü ve şimşek vardır. Ölüm korkusuyla yıldırımlardan parmaklarını kulaklarına tıkarlar. Oysa Allah inkâr edenleri çepeçevre kuşatmıştır.</p>
+    <p><strong>20.</strong> Şimşek neredeyse gözlerini kör edecek gibidir; önlerini aydınlattığında yürürler, karardığında dururlar. Allah dileseydi işitmelerini ve görmelerini tamamen giderirdi. Şüphesiz Allah her şeye gücü yetendir.</p>
   </section>
 
 </div>
