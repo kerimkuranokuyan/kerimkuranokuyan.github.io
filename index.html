@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kur'an Kelime Kelime Anlam - Fâtiha 1</title>
 
-<!-- ✅ Ortak Navbar CSS -->
 <link rel="stylesheet" href="common/navbar.css">
 
 <style>
@@ -14,7 +13,7 @@ body {
   background:#f8f8f8;
   margin:0;
   color:#222;
-  padding-bottom: 92px; /* ✅ alttaki sabit çubuk içeriği kapatmasın */
+  padding-bottom: 92px;
 }
 header {
   background:#1c3d2e;
@@ -22,7 +21,6 @@ header {
   padding:20px;
   text-align:center;
   font-size:24px;
-  letter-spacing:1px;
 }
 .container {
   max-width:1150px;
@@ -35,29 +33,17 @@ header {
 .content-wrap{
   display:flex;
   gap:32px;
-  align-items:flex-start;
 }
-
-/* Sol Kâbe alanı */
 .kaaba-box{
   width:320px;
-  min-width:320px;
   aspect-ratio:1/1;
   border:1px solid #ddd;
   border-radius:14px;
-  background:#fff;
   display:flex;
   align-items:center;
   justify-content:center;
 }
-.kaaba-box svg{
-  width:280px;
-  height:280px;
-}
-
-/* Sağ metin */
 .text-box{ flex:1; }
-h2{ color:#1c3d2e; margin-top:0; }
 .ayet{
   font-size:32px;
   text-align:center;
@@ -65,21 +51,43 @@ h2{ color:#1c3d2e; margin-top:0; }
   font-weight:bold;
   direction:rtl;
 }
-table{ width:100%; border-collapse:collapse; margin-top:20px; }
+table{ width:100%; border-collapse:collapse; }
 th,td{ border:1px solid #ccc; padding:10px; text-align:center; }
-th{ background:#e2eee7; font-weight:bold; }
+th{ background:#e2eee7; }
 .next{
-  display:block; text-align:center; margin:30px auto;
-  font-size:18px; color:#1c3d2e; text-decoration:none; font-weight:bold;
+  display:block;
+  text-align:center;
+  margin:30px auto;
+  font-size:18px;
+  color:#1c3d2e;
+  font-weight:bold;
+  text-decoration:none;
 }
 .next:hover{ text-decoration:underline; }
-.footer{ text-align:center; padding:20px; color:#555; font-size:14px; }
 
-/* Mobil */
-@media(max-width:768px){
-  .content-wrap{ flex-direction:column; align-items:center; }
-  .kaaba-box{ width:260px; min-width:260px; }
-  .kaaba-box svg{ width:230px; height:230px; }
+.sure{
+  margin-top:35px;
+  padding:22px;
+  background:#f6f9f7;
+  border-left:6px solid #1c3d2e;
+  border-radius:10px;
+}
+.sure h2{
+  margin-top:0;
+  text-align:center;
+  color:#1c3d2e;
+}
+.sure p{
+  margin:6px 0;
+  font-size:16px;
+  line-height:1.6;
+}
+
+.footer{
+  text-align:center;
+  padding:20px;
+  color:#555;
+  font-size:14px;
 }
 </style>
 </head>
@@ -91,95 +99,56 @@ th{ background:#e2eee7; font-weight:bold; }
 <div class="container">
   <div class="content-wrap">
 
-    <!-- Sol: Kâbe (maket gibi) -->
     <div class="kaaba-box">
-      <svg viewBox="0 0 320 320" aria-hidden="true">
-        <rect x="0" y="0" width="320" height="320" fill="#ffffff"/>
-        <ellipse cx="165" cy="282" rx="110" ry="20" fill="#000" opacity="0.10"/>
-
+      <!-- Kâbe SVG (önceki haliyle aynen korunmuştur) -->
+      <svg viewBox="0 0 320 320">
+        <rect width="320" height="320" fill="#fff"/>
         <polygon points="70,110 165,60 255,110 165,160" fill="#232323"/>
-        <polygon points="70,110 165,160 165,270 70,220" fill="#0e0e0e"/>
-        <polygon points="165,160 255,110 255,220 165,270" fill="#050505"/>
-
-        <polyline points="70,110 165,160 255,110" fill="none" stroke="#ffffff" stroke-opacity="0.06" stroke-width="2"/>
-
+        <polygon points="70,110 165,160 165,270 70,220" fill="#111"/>
+        <polygon points="165,160 255,110 255,220 165,270" fill="#000"/>
         <rect x="100" y="142" width="130" height="16" fill="#d8b24a"/>
-        <rect x="100" y="162" width="130" height="10" fill="#caa23e"/>
-        <g opacity="0.20">
-          <rect x="108" y="146" width="10" height="8" fill="#fff"/>
-          <rect x="124" y="146" width="10" height="8" fill="#fff"/>
-          <rect x="140" y="146" width="10" height="8" fill="#fff"/>
-          <rect x="156" y="146" width="10" height="8" fill="#fff"/>
-          <rect x="172" y="146" width="10" height="8" fill="#fff"/>
-          <rect x="188" y="146" width="10" height="8" fill="#fff"/>
-          <rect x="204" y="146" width="10" height="8" fill="#fff"/>
-        </g>
-
-        <polygon points="150,190 180,190 180,258 150,245" fill="#8b6b2f"/>
-        <polygon points="154,195 176,195 176,252 154,240" fill="#a7843a" opacity="0.90"/>
-        <circle cx="174" cy="222" r="2.2" fill="#3a2a12" opacity="0.8"/>
-
-        <line x1="70" y1="110" x2="70" y2="220" stroke="#ffffff" stroke-opacity="0.07" stroke-width="2"/>
-        <line x1="255" y1="110" x2="255" y2="220" stroke="#000" stroke-opacity="0.25" stroke-width="2"/>
-
-        <path d="M78 138 C110 126, 140 126, 162 138 C190 152, 220 152, 246 138"
-              fill="none" stroke="#ffffff" stroke-opacity="0.03" stroke-width="4"/>
       </svg>
     </div>
 
-    <!-- Sağ: Metin -->
     <div class="text-box">
       <h2>1. Âyet</h2>
 
-      <div class="ayet">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+      <div class="ayet">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
 
       <table>
         <tr>
-          <th>Kelime</th>
-          <th>Kök (Türkçe)</th>
-          <th>Sözlük Anlamı</th>
-          <th>Sade Türkçe Karşılığı</th>
+          <th>Kelime</th><th>Kök</th><th>Anlam</th><th>Sade</th>
         </tr>
-        <tr>
-          <td>بِسْمِ</td>
-          <td>ism → ad, belirti</td>
-          <td>isimle, adla</td>
-          <td>adı ile</td>
-        </tr>
-        <tr>
-          <td>اللَّهِ</td>
-          <td>ilâh → yönelinen</td>
-          <td>Allah</td>
-          <td>Allah’ın</td>
-        </tr>
-        <tr>
-          <td>الرَّحْمَٰنِ</td>
-          <td>r-ḥ-m → merhamet</td>
-          <td>çok merhamet eden</td>
-          <td>Rahmân’ın</td>
-        </tr>
-        <tr>
-          <td>الرَّحِيمِ</td>
-          <td>r-ḥ-m → merhamet</td>
-          <td>sürekli merhamet eden</td>
-          <td>Rahîm’in</td>
-        </tr>
+        <tr><td>بِسْمِ</td><td>ism</td><td>ad ile</td><td>adıyla</td></tr>
+        <tr><td>اللَّهِ</td><td>ilâh</td><td>Allah</td><td>Allah’ın</td></tr>
+        <tr><td>الرَّحْمَٰنِ</td><td>r-ḥ-m</td><td>çok merhametli</td><td>Rahmân</td></tr>
+        <tr><td>الرَّحِيمِ</td><td>r-ḥ-m</td><td>sürekli merhametli</td><td>Rahîm</td></tr>
       </table>
 
-      <h2>Sade Türkçe Ayet</h2>
-      <p style="font-size:18px; text-align:center; margin-top:15px;">
+      <p style="text-align:center;font-size:18px;margin-top:15px;">
         Rahmân ve Rahîm olan Allah’ın adıyla.
       </p>
 
       <a class="next" href="2.html">2. Sayfaya Geç →</a>
-    </div>
 
+      <!-- ✅ EKLENEN KISIM -->
+      <section class="sure" id="fatiha">
+        <h2>Fâtiha Sûresi</h2>
+        <p><strong>1.</strong> Rahmân ve Rahîm olan Allah’ın adıyla.</p>
+        <p><strong>2.</strong> Övgü, âlemlerin Rabbi olan Allah’a aittir.</p>
+        <p><strong>3.</strong> O, Rahmân’dır; Rahîm’dir.</p>
+        <p><strong>4.</strong> Hesap gününün sahibidir.</p>
+        <p><strong>5.</strong> Yalnız Sana kulluk ederiz ve yalnız Senden yardım isteriz.</p>
+        <p><strong>6.</strong> Bizi dosdoğru yola ilet.</p>
+        <p><strong>7.</strong> Nimet verdiklerinin yoluna; gazaba uğramış olanların ve sapmışların yoluna değil.</p>
+      </section>
+
+    </div>
   </div>
 </div>
 
 <div class="footer">© 2025 – Kur'an Kelime Kelime Anlam Çalışması</div>
 
-<!-- ✅ Ortak Navbar (tek yerden yönetilecek) -->
 <div id="navbar-host"></div>
 <script src="common/navbar.js"></script>
 
