@@ -21,6 +21,7 @@ header{
   padding:20px;
   text-align:center;
   font-size:24px;
+  letter-spacing:1px;
 }
 .container{
   max-width:900px;
@@ -38,10 +39,11 @@ header{
   margin-bottom:30px;
 }
 .kaaba-box svg{
-  width:260px;
+  width:280px;
   height:auto;
 }
 
+/* içerik */
 h2{color:#1c3d2e;margin-top:0;}
 .ayet{
   font-size:32px;
@@ -71,8 +73,8 @@ th{background:#e2eee7;}
   border-left:6px solid #1c3d2e;
   border-radius:10px;
 }
-.sure h2{text-align:center;}
-.sure p{margin:6px 0;font-size:16px;}
+.sure h2{ text-align:center; }
+.sure p{ margin:6px 0; font-size:16px; line-height:1.6; }
 
 .footer{
   text-align:center;
@@ -89,15 +91,47 @@ th{background:#e2eee7;}
 
 <div class="container">
 
-  <!-- ✅ KÂBE (BOZULMADI) -->
+  <!-- ✅ KÂBE (KAPILI, DETAYLI) -->
   <div class="kaaba-box">
     <svg viewBox="0 0 320 320" aria-hidden="true">
-      <rect width="320" height="320" fill="#fff"/>
+      <rect x="0" y="0" width="320" height="320" fill="#ffffff"/>
       <ellipse cx="165" cy="282" rx="110" ry="20" fill="#000" opacity="0.10"/>
+
+      <!-- üst yüz -->
       <polygon points="70,110 165,60 255,110 165,160" fill="#232323"/>
+      <!-- sol yüz -->
       <polygon points="70,110 165,160 165,270 70,220" fill="#0e0e0e"/>
+      <!-- sağ yüz -->
       <polygon points="165,160 255,110 255,220 165,270" fill="#050505"/>
+
+      <!-- hafif kenar çizgisi -->
+      <polyline points="70,110 165,160 255,110" fill="none" stroke="#ffffff" stroke-opacity="0.06" stroke-width="2"/>
+
+      <!-- altın kuşak -->
       <rect x="100" y="142" width="130" height="16" fill="#d8b24a"/>
+      <rect x="100" y="162" width="130" height="10" fill="#caa23e"/>
+      <g opacity="0.20">
+        <rect x="108" y="146" width="10" height="8" fill="#fff"/>
+        <rect x="124" y="146" width="10" height="8" fill="#fff"/>
+        <rect x="140" y="146" width="10" height="8" fill="#fff"/>
+        <rect x="156" y="146" width="10" height="8" fill="#fff"/>
+        <rect x="172" y="146" width="10" height="8" fill="#fff"/>
+        <rect x="188" y="146" width="10" height="8" fill="#fff"/>
+        <rect x="204" y="146" width="10" height="8" fill="#fff"/>
+      </g>
+
+      <!-- ✅ KAPI (ÖN YÜZDE) -->
+      <polygon points="150,190 180,190 180,258 150,245" fill="#8b6b2f"/>
+      <polygon points="154,195 176,195 176,252 154,240" fill="#a7843a" opacity="0.92"/>
+      <circle cx="174" cy="222" r="2.2" fill="#3a2a12" opacity="0.85"/>
+
+      <!-- dikey kenar vurguları -->
+      <line x1="70" y1="110" x2="70" y2="220" stroke="#ffffff" stroke-opacity="0.07" stroke-width="2"/>
+      <line x1="255" y1="110" x2="255" y2="220" stroke="#000" stroke-opacity="0.25" stroke-width="2"/>
+
+      <!-- hafif kumaş kıvrım izi -->
+      <path d="M78 138 C110 126, 140 126, 162 138 C190 152, 220 152, 246 138"
+            fill="none" stroke="#ffffff" stroke-opacity="0.03" stroke-width="4"/>
     </svg>
   </div>
 
@@ -119,7 +153,6 @@ th{background:#e2eee7;}
 
   <a class="next" href="2.html">2. Sayfaya Geç →</a>
 
-  <!-- ✅ FÂTİHA METNİ -->
   <section class="sure" id="fatiha">
     <h2>Fâtiha Sûresi</h2>
     <p><strong>1.</strong> Rahmân ve Rahîm olan Allah’ın adıyla.</p>
