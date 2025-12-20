@@ -5,88 +5,103 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kur'an Kelime Kelime Anlam - Bakara 2</title>
 
+<!-- ✅ Ortak Navbar CSS -->
 <link rel="stylesheet" href="common/navbar.css">
 
 <style>
-body {
-  font-family: "Segoe UI", sans-serif;
-  background-color: #f8f8f8;
-  margin: 0;
-  padding: 0;
-  color: #222;
-  padding-bottom: 92px;
+body{
+  font-family:"Segoe UI",sans-serif;
+  background:#f8f8f8;
+  margin:0;
+  color:#222;
+  padding-bottom:92px; /* ✅ sabit navbar içeriği kapatmasın */
 }
-header {
-  background: #1c3d2e;
-  color: white;
-  padding: 20px;
-  text-align: center;
-  font-size: 24px;
-  letter-spacing: 1px;
+header{
+  background:#1c3d2e;
+  color:#fff;
+  padding:20px;
+  text-align:center;
+  font-size:24px;
+  letter-spacing:1px;
 }
-.container {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 20px;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.08);
+.container{
+  max-width:900px;
+  margin:40px auto;
+  padding:20px;
+  background:#fff;
+  border-radius:10px;
+  box-shadow:0 0 10px rgba(0,0,0,.08);
 }
-h2 {
-  margin-top: 0;
-  color: #1c3d2e;
+h2{ color:#1c3d2e; margin-top:0; }
+.ayet{
+  font-size:30px;
+  text-align:center;
+  margin:30px 0;
+  font-weight:bold;
+  direction:rtl;
+  line-height:1.8;
 }
-.ayet {
-  font-size: 30px;
-  text-align: center;
-  margin: 30px 0;
-  font-weight: bold;
-  direction: rtl;
-  line-height: 1.8;
+table{
+  width:100%;
+  border-collapse:collapse;
+  margin-top:20px;
 }
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
+th,td{
+  border:1px solid #ccc;
+  padding:10px;
+  text-align:center;
+  vertical-align:middle;
 }
-th, td {
-  border: 1px solid #ccc;
-  padding: 10px;
-  text-align: center;
-  vertical-align: middle;
+th{
+  background:#e2eee7;
+  font-weight:bold;
 }
-th {
-  background: #e2eee7;
-  font-weight: bold;
+
+/* ✅ Bakara-1'deki gibi "note" kutusu */
+.note{
+  margin-top:14px;
+  padding:12px 14px;
+  background:#f3f7f4;
+  border-left:4px solid #1c3d2e;
+  border-radius:6px;
+  color:#2a2a2a;
+  font-size:15px;
+  line-height:1.5;
 }
-.nav-links {
-  text-align: center;
-  margin-top: 30px;
-  font-size: 18px;
+
+/* ✅ Sayfa içi ileri/geri */
+.nav-links{
+  text-align:center;
+  margin-top:30px;
+  font-size:18px;
 }
-.nav-links a {
-  margin: 0 15px;
-  color: #1c3d2e;
-  text-decoration: none;
-  font-weight: bold;
+.nav-links a{
+  margin:0 15px;
+  color:#1c3d2e;
+  text-decoration:none;
+  font-weight:bold;
 }
-.nav-links a:hover {
-  text-decoration: underline;
+.nav-links a:hover{ text-decoration:underline; }
+
+.footer{
+  text-align:center;
+  padding:20px;
+  color:#555;
+  font-size:14px;
 }
-.sure {
-  margin-top: 50px;
-  padding-top: 30px;
-  border-top: 2px solid #e2eee7;
+
+/* ✅ Eklenen sure bölümü (düzgün görünüm) */
+.sure{
+  max-width:900px;
+  margin:40px auto;
+  padding:20px;
+  background:#fff;
+  border-radius:10px;
+  box-shadow:0 0 10px rgba(0,0,0,.08);
 }
-.sure p {
-  font-size: 16px;
-  line-height: 1.7;
-}
-.footer {
-  text-align: center;
-  padding: 20px;
-  color: #555;
-  font-size: 14px;
+.sure p{
+  font-size:16px;
+  line-height:1.6;
 }
 </style>
 </head>
@@ -96,76 +111,80 @@ th {
 <header>Kur'an Kelime Kelime Anlam – Bakara Sûresi</header>
 
 <div class="container">
+  <h2>2. Âyet</h2>
 
-<h2>2. Âyet</h2>
+  <div class="ayet">
+    ذَٰلِكَ الْكِتَابُ لَا رَيْبَ ۛ فِيهِ ۛ هُدًى لِّلْمُتَّقِينَ
+  </div>
 
-<div class="ayet">
-ذَٰلِكَ الْكِتَابُ لَا رَيْبَ ۛ فِيهِ ۛ هُدًى لِّلْمُتَّقِينَ
+  <table>
+    <tr>
+      <th>Kelime</th>
+      <th>Kök (Türkçe)</th>
+      <th>Sözlük Anlamı</th>
+      <th>Sade Türkçe Karşılığı</th>
+    </tr>
+    <tr>
+      <td>ذَٰلِكَ</td>
+      <td>— (işaret zamiri)</td>
+      <td>şu, o</td>
+      <td>işte o</td>
+    </tr>
+    <tr>
+      <td>الْكِتَابُ</td>
+      <td>k-t-b → yazmak</td>
+      <td>kitap, yazı</td>
+      <td>kitap</td>
+    </tr>
+    <tr>
+      <td>لَا</td>
+      <td>—</td>
+      <td>yok, değildir</td>
+      <td>yoktur</td>
+    </tr>
+    <tr>
+      <td>رَيْبَ</td>
+      <td>r-y-b → şüphe</td>
+      <td>kuşku, şüphe</td>
+      <td>şüphe</td>
+    </tr>
+    <tr>
+      <td>فِيهِ</td>
+      <td>—</td>
+      <td>onun içinde</td>
+      <td>onda</td>
+    </tr>
+    <tr>
+      <td>هُدًى</td>
+      <td>h-d-y → yol göstermek</td>
+      <td>yol gösterme</td>
+      <td>yol gösterici</td>
+    </tr>
+    <tr>
+      <td>لِّلْمُتَّقِينَ</td>
+      <td>w-q-y → korunmak</td>
+      <td>sakınanlar</td>
+      <td>sakınanlar için</td>
+    </tr>
+  </table>
+
+  <div class="note">
+    Bu âyette “kitap” ifadesi, metnin kendisine işaret eder; “şüphe yoktur” ifadesi de güven vurgusu taşır.
+  </div>
+
+  <h2>Sade Türkçe Ayet</h2>
+  <p style="font-size:18px; text-align:center; margin-top:15px;">
+    İşte o kitap; onda hiçbir şüphe yoktur; sakınanlar için bir yol göstericidir.
+  </p>
+
+  <!-- ✅ Bakara-1 ile aynı tarz ileri/geri -->
+  <div class="nav-links">
+    <a href="Bakara-1.html">← Bakara 1</a>
+    <a href="Bakara-3.html">Bakara 3 →</a>
+  </div>
 </div>
 
-<table>
-<tr>
-<th>Kelime</th>
-<th>Kök (Türkçe)</th>
-<th>Sözlük Anlamı</th>
-<th>Sade Türkçe Karşılığı</th>
-</tr>
-<tr>
-<td>ذَٰلِكَ</td>
-<td>—</td>
-<td>işaret zamiri</td>
-<td>işte o</td>
-</tr>
-<tr>
-<td>الْكِتَابُ</td>
-<td>k-t-b → yazmak</td>
-<td>kitap</td>
-<td>kitap</td>
-</tr>
-<tr>
-<td>لَا</td>
-<td>—</td>
-<td>yok</td>
-<td>yoktur</td>
-</tr>
-<tr>
-<td>رَيْبَ</td>
-<td>r-y-b → şüphe</td>
-<td>şüphe</td>
-<td>şüphe</td>
-</tr>
-<tr>
-<td>فِيهِ</td>
-<td>—</td>
-<td>onun içinde</td>
-<td>onda</td>
-</tr>
-<tr>
-<td>هُدًى</td>
-<td>h-d-y → yol göstermek</td>
-<td>yol gösterme</td>
-<td>yol gösterici</td>
-</tr>
-<tr>
-<td>لِّلْمُتَّقِينَ</td>
-<td>w-q-y → korunmak</td>
-<td>sakınanlar</td>
-<td>sakınanlar için</td>
-</tr>
-</table>
-
-<h2>Sade Türkçe Ayet</h2>
-<p style="font-size:18px; text-align:center; margin-top:15px;">
-İşte bu Kitap; onda hiçbir şüphe yoktur; sakınanlar için bir yol göstericidir.
-</p>
-
-<div class="nav-links">
-  <a href="Bakara-1.html">← Bakara 1</a>
-  <a href="Bakara-3.html">Bakara 3 →</a>
-</div>
-
-<!-- ====== SENİN GÖNDERDİĞİN KOD – EKSİKSİZ ====== -->
-
+<!-- ✅ SENİN GÖNDERDİĞİN KOD (21-40) — EKSİKSİZ / KISALTMASIZ -->
 <section class="sure" id="bakara-21-40">
   <h2>Bakara Sûresi (21-40)</h2>
 
@@ -210,12 +229,11 @@ th {
   <p><strong>40.</strong> Ey İsrailoğulları! Size verdiğim nimetimi hatırlayın; Bana verdiğiniz sözü yerine getirin ki Ben de size verdiğim sözü yerine getireyim. Yalnız Benden korkun.</p>
 </section>
 
-</div>
-
 <div class="footer">
-© 2025 – Kur'an Kelime Kelime Anlam Çalışması
+  © 2025 – Kur'an Kelime Kelime Anlam Çalışması
 </div>
 
+<!-- ✅ Ortak Navbar -->
 <div id="navbar-host"></div>
 <script src="common/navbar.js"></script>
 
