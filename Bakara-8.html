@@ -14,7 +14,7 @@ body{
   background:#f8f8f8;
   margin:0;
   color:#222;
-  padding-bottom:92px;
+  padding-bottom:92px; /* ✅ sabit navbar içeriği kapatmasın */
 }
 header{
   background:#1c3d2e;
@@ -32,10 +32,7 @@ header{
   border-radius:10px;
   box-shadow:0 0 10px rgba(0,0,0,.08);
 }
-h2{
-  margin-top:0;
-  color:#1c3d2e;
-}
+h2{ margin-top:0; color:#1c3d2e; }
 .ayet{
   font-size:28px;
   text-align:center;
@@ -59,24 +56,21 @@ th{
   background:#e2eee7;
   font-weight:bold;
 }
+
+/* ✅ Sayfa içi ileri/geri */
 .nav-links{
   text-align:center;
   margin-top:30px;
   font-size:18px;
-  display:flex;
-  gap:18px;
-  justify-content:center;
-  flex-wrap:wrap;
 }
 .nav-links a{
+  margin:0 15px;
   color:#1c3d2e;
   text-decoration:none;
-  font-weight:800;
-  padding:10px 14px;
-  border:1px solid #1c3d2e;
-  border-radius:12px;
-  background:#fff;
+  font-weight:bold;
 }
+.nav-links a:hover{ text-decoration:underline; }
+
 .footer{
   text-align:center;
   padding:20px;
@@ -84,24 +78,20 @@ th{
   font-size:14px;
 }
 
-/* ✅ Eklenen sure bölümü */
+/* ✅ Eklenen bölümün sayfada güzel görünmesi için (tabloyu etkilemez) */
 .sure{
-  margin-top:50px;
-  padding-top:30px;
-  border-top:2px solid #1c3d2e;
+  margin-top:28px;
+  padding-top:18px;
+  border-top:1px solid #e6e6e6;
 }
-.sure h3{
-  text-align:center;
+.sure h2{
   color:#1c3d2e;
-  margin-bottom:25px;
+  margin:0 0 10px 0;
 }
 .sure p{
-  font-size:17px;
-  line-height:1.7;
-  margin-bottom:14px;
-}
-.sure strong{
-  color:#1c3d2e;
+  font-size:18px;
+  line-height:1.75;
+  margin:10px 0;
 }
 </style>
 </head>
@@ -118,66 +108,156 @@ th{
     وَبِالْيَوْمِ الْآخِرِ وَمَا هُم بِمُؤْمِنِينَ
   </div>
 
+  <table>
+    <tr>
+      <th>Kelime</th>
+      <th>Kök (Türkçe)</th>
+      <th>Sözlük Anlamı</th>
+      <th>Sade Türkçe Karşılığı</th>
+    </tr>
+    <tr>
+      <td>وَ</td>
+      <td>— (bağlaç)</td>
+      <td>ve</td>
+      <td>ve</td>
+    </tr>
+    <tr>
+      <td>مِنَ</td>
+      <td>—</td>
+      <td>-den</td>
+      <td>-den</td>
+    </tr>
+    <tr>
+      <td>النَّاسِ</td>
+      <td>n-w-s / ʾ-n-s → insan</td>
+      <td>insanlar</td>
+      <td>insanlardan</td>
+    </tr>
+    <tr>
+      <td>مَن</td>
+      <td>—</td>
+      <td>kim, kimileri</td>
+      <td>kimileri</td>
+    </tr>
+    <tr>
+      <td>يَقُولُ</td>
+      <td>q-w-l → söylemek</td>
+      <td>söyler</td>
+      <td>der</td>
+    </tr>
+    <tr>
+      <td>آمَنَّا</td>
+      <td>ʾ-m-n → güvenmek</td>
+      <td>inandık</td>
+      <td>inandık</td>
+    </tr>
+    <tr>
+      <td>بِاللَّهِ</td>
+      <td>ilâh → yönelinen</td>
+      <td>Allah’a</td>
+      <td>Allah’a</td>
+    </tr>
+    <tr>
+      <td>وَ</td>
+      <td>— (bağlaç)</td>
+      <td>ve</td>
+      <td>ve</td>
+    </tr>
+    <tr>
+      <td>بِالْيَوْمِ</td>
+      <td>y-w-m → gün</td>
+      <td>gün</td>
+      <td>gününe</td>
+    </tr>
+    <tr>
+      <td>الْآخِرِ</td>
+      <td>ʾ-ḫ-r → son</td>
+      <td>son</td>
+      <td>âhiret</td>
+    </tr>
+    <tr>
+      <td>وَمَا</td>
+      <td>—</td>
+      <td>oysa değil</td>
+      <td>oysa</td>
+    </tr>
+    <tr>
+      <td>هُم</td>
+      <td>— (zamir)</td>
+      <td>onlar</td>
+      <td>onlar</td>
+    </tr>
+    <tr>
+      <td>بِمُؤْمِنِينَ</td>
+      <td>ʾ-m-n → güvenmek</td>
+      <td>inanmış kimseler</td>
+      <td>inanmış değiller</td>
+    </tr>
+  </table>
+
   <h2>Sade Türkçe Ayet</h2>
-  <p style="font-size:18px; text-align:center;">
+  <p style="font-size:18px; text-align:center; margin-top:15px;">
     İnsanlardan bazıları “Allah’a ve âhiret gününe inandık” derler; oysa onlar inanmış değildirler.
   </p>
 
-  <!-- ✅ Sayfa geçişleri -->
+  <!-- ✅ İleri / Geri -->
   <div class="nav-links">
     <a href="Bakara-7.html">← Bakara 7</a>
     <a href="Bakara-9.html">Bakara 9 →</a>
   </div>
 
-  <!-- 🔽🔽🔽 EKSİKSİZ EKLENEN BÖLÜM 🔽🔽🔽 -->
+  <!-- ✅ KISALTMASIZ EK: Bakara 141–160 -->
   <section class="sure" id="bakara-141-160">
-    <h3>Bakara Sûresi (141–160)</h3>
+    <h2>Bakara Sûresi (141–160)</h2>
 
     <p><strong>141.</strong> Onlar geçmiş bir ümmettir. Kazandıkları kendilerine, sizin kazandıklarınız da sizedir. Onların yaptıklarından siz sorulmazsınız.</p>
 
-    <p><strong>142.</strong> İnsanlardan birtakım beyinsizler diyecekler ki: “Onları daha önce yöneldikleri kıbleden çeviren nedir?” De ki: “Doğu da batı da Allah’ındır. O, dilediğini dosdoğru yola iletir.”</p>
+    <p><strong>142.</strong> İnsanlardan beyinsizler: “Onları daha önce yöneldikleri kıbleden çeviren nedir?” diyecekler. De ki: “Doğu da batı da Allah’ındır. O, dilediğini dosdoğru yola iletir.”</p>
 
-    <p><strong>143.</strong> Böylece sizi orta bir ümmet yaptık ki, insanlar üzerine şahitler olasınız, Peygamber de sizin üzerinize şahit olsun. Daha önce üzerinde bulunduğun kıbleyi ancak Peygamber’e uyanı, topukları üzerinde geri dönenlerden ayırt edelim diye belirledik. Bu, Allah’ın hidayet verdiği kimseler dışında elbette ağır bir işti. Allah, imanınızı boşa çıkaracak değildir. Şüphesiz Allah insanlara karşı çok şefkatli, çok merhametlidir.</p>
+    <p><strong>143.</strong> Böylece sizi orta bir ümmet yaptık ki, insanlar üzerine tanıklar olasınız; elçi de sizin üzerinize tanık olsun. Daha önce yöneldiğin kıbleyi ancak elçiye uyanı, geri dönen kimseden ayırt edelim diye belirlemiştik. Bu elbette Allah’ın hidayet verdiği kimseler dışında ağır gelir. Allah, imanınızı boşa çıkaracak değildir. Şüphesiz Allah insanlara karşı çok şefkatli, çok merhametlidir.</p>
 
-    <p><strong>144.</strong> Biz senin yüzünün göğe doğru çevrildiğini görüyoruz. Seni hoşnut olacağın bir kıbleye mutlaka çevireceğiz. Artık yüzünü Mescid-i Haram tarafına çevir. Nerede olursanız olun, yüzlerinizi o tarafa çevirin. Kendilerine Kitap verilenler bunun Rablerinden gelen gerçek olduğunu elbette bilirler. Allah onların yaptıklarından habersiz değildir.</p>
+    <p><strong>144.</strong> Yüzünü göğe doğru çevirip durduğunu elbette görüyoruz. Şimdi seni hoşnut olacağın bir kıbleye elbette çevireceğiz. Öyleyse yüzünü Mescid-i Haram tarafına çevir. Nerede olursanız olun yüzlerinizi onun tarafına çevirin. Kendilerine Kitap verilenler bunun Rablerinden bir gerçek olduğunu elbette bilirler. Allah onların yaptıklarından habersiz değildir.</p>
 
-    <p><strong>145.</strong> Kendilerine Kitap verilenlere her türlü ayeti getirsen bile senin kıblene uymazlar. Sen de onların kıblesine uyacak değilsin. Onların bir kısmı diğerinin kıblesine uymaz. Sana gelen ilimden sonra onların heveslerine uyarsan, işte o zaman zalimlerden olursun.</p>
+    <p><strong>145.</strong> Kendilerine Kitap verilenlere her türlü ayeti getirsen de senin kıblene uymazlar. Sen de onların kıblesine uyacak değilsin. Onların bir kısmı da bir kısmının kıblesine uymaz. Sana gelen ilimden sonra eğer onların heveslerine uyarsan, şüphesiz sen de zalimlerden olursun.</p>
 
-    <p><strong>146.</strong> Kendilerine Kitap verdiklerimiz onu, öz oğullarını tanıdıkları gibi tanırlar. Buna rağmen onların bir kısmı bile bile gerçeği gizler.</p>
+    <p><strong>146.</strong> Kendilerine Kitap verdiklerimiz onu kendi oğullarını tanıdıkları gibi tanırlar. Onlardan bir grup ise gerçeği bile bile gizler.</p>
 
-    <p><strong>147.</strong> Gerçek, Rabbinden gelendir. O hâlde sakın şüphe edenlerden olma.</p>
+    <p><strong>147.</strong> Gerçek, Rabbindendir. O hâlde sakın şüphe edenlerden olma.</p>
 
-    <p><strong>148.</strong> Herkesin yöneldiği bir yön vardır. Hayırlarda yarışın. Nerede olursanız olun, Allah hepinizi bir araya getirecektir. Şüphesiz Allah her şeye gücü yetendir.</p>
+    <p><strong>148.</strong> Her birinin yöneldiği bir yön vardır. Öyleyse hayırlarda yarışın. Nerede olursanız olun Allah sizi bir araya getirir. Şüphesiz Allah her şeye güç yetirendir.</p>
 
-    <p><strong>149.</strong> Nereden yola çıkarsan çık, yüzünü Mescid-i Haram tarafına çevir. Bu, Rabbinden gelen gerçektir. Allah yaptıklarınızdan habersiz değildir.</p>
+    <p><strong>149.</strong> Nereden çıkarsan çık yüzünü Mescid-i Haram tarafına çevir. Bu, Rabbin tarafından gelen bir gerçektir. Allah yaptıklarınızdan habersiz değildir.</p>
 
-    <p><strong>150.</strong> Nereden çıkarsan çık, yüzünü Mescid-i Haram tarafına çevir. Nerede olursanız olun, yüzlerinizi ona çevirin ki, zalimler dışında insanların size karşı bir delili olmasın. Onlardan korkmayın; Benden korkun ki, üzerinizdeki nimetimi tamamlayayım ve doğru yolu bulasınız.</p>
+    <p><strong>150.</strong> Nereden çıkarsan çık yüzünü Mescid-i Haram tarafına çevir; nerede olursanız olun yüzlerinizi onun tarafına çevirin ki, insanlardan zalim olanlar dışında onların size karşı bir delili olmasın. Onlardan korkmayın; Benden korkun. Bu, üzerinizdeki nimetimi tamamlamam ve doğru yola iletilmeniz içindir.</p>
 
-    <p><strong>151.</strong> Nitekim içinizden size ayetlerimizi okuyan, sizi arındıran, size Kitap’ı ve hikmeti öğreten ve bilmediklerinizi öğreten bir elçi gönderdik.</p>
+    <p><strong>151.</strong> Nitekim size içinizden, ayetlerimizi okuyan, sizi arındıran, size Kitap’ı ve hikmeti öğreten ve bilmediklerinizi öğreten bir elçi gönderdik.</p>
 
-    <p><strong>152.</strong> O hâlde Beni anın ki Ben de sizi anayım. Bana şükredin, nankörlük etmeyin.</p>
+    <p><strong>152.</strong> Öyleyse Beni anın ki Ben de sizi anayım; Bana şükredin, nankörlük etmeyin.</p>
 
-    <p><strong>153.</strong> Ey iman edenler! Sabır ve namazla yardım isteyin. Şüphesiz Allah sabredenlerle beraberdir.</p>
+    <p><strong>153.</strong> Ey iman edenler! Sabır ve salât ile yardım isteyin. Şüphesiz Allah sabredenlerle beraberdir.</p>
 
-    <p><strong>154.</strong> Allah yolunda öldürülenlere “ölüler” demeyin. Hayır, onlar diridirler; fakat siz farkında olmazsınız.</p>
+    <p><strong>154.</strong> Allah yolunda öldürülenlere “ölüler” demeyin. Hayır, onlar diridirler; fakat siz fark edemezsiniz.</p>
 
-    <p><strong>155.</strong> Andolsun ki sizi biraz korku, açlık, mallardan, canlardan ve ürünlerden eksiltme ile deneyeceğiz. Sabredenleri müjdele.</p>
+    <p><strong>155.</strong> Andolsun, sizi biraz korku, açlık, mallardan, canlardan ve ürünlerden eksiltme ile deneyeceğiz. Sabredenleri müjdele!</p>
 
-    <p><strong>156.</strong> Onlar ki, başlarına bir musibet geldiğinde: “Biz Allah’a aidiz ve O’na döneceğiz” derler.</p>
+    <p><strong>156.</strong> Onlar, kendilerine bir musibet geldiğinde: “Şüphesiz biz Allah’a aidiz ve şüphesiz biz O’na döneceğiz” derler.</p>
 
-    <p><strong>157.</strong> İşte Rablerinden bağışlanma ve rahmet onlaradır. İşte doğru yolda olanlar onlardır.</p>
+    <p><strong>157.</strong> İşte onlara Rablerinden bağışlanmalar ve rahmet vardır. İşte onlar doğru yola iletilmiş olanlardır.</p>
 
-    <p><strong>158.</strong> Şüphesiz Safa ile Merve Allah’ın işaretlerindendir. Kim Beyt’i hacceder ya da umre yaparsa, onları tavaf etmesinde kendisi için bir günah yoktur. Kim gönülden bir hayır işlerse, şüphesiz Allah şükredenleri bilir.</p>
+    <p><strong>158.</strong> Şüphesiz Safâ ile Merve Allah’ın işaretlerindendir. Kim Beyt’i hac ya da umre ile ziyaret ederse, bu ikisi arasında gidip gelmesinde ona bir günah yoktur. Kim gönüllü olarak bir hayır yaparsa, şüphesiz Allah karşılığını verendir, bilendir.</p>
 
-    <p><strong>159.</strong> Kitapta insanlara açıkladığımız açık delilleri ve doğru yolu gizleyenler var ya, işte onlara Allah lanet eder; lanet edebilenler de lanet eder.</p>
+    <p><strong>159.</strong> Şüphesiz indirdiğimiz apaçık delilleri ve hidayeti, Kitap’ta insanlara açıkça bildirdikten sonra gizleyenlere, Allah lanet eder; lanet edenler de onlara lanet eder.</p>
 
-    <p><strong>160.</strong> Ancak tevbe edenler, durumlarını düzeltenler ve açıklayanlar başkadır. Onların tevbesini kabul ederim. Ben tevbeleri çok kabul edenim, çok merhametliyim.</p>
+    <p><strong>160.</strong> Ancak tevbe edenler, düzeltenler ve açıklayanlar başka; işte onların tevbesini kabul ederim. Ben tevbeyi çok kabul edenim, çok merhamet edenim.</p>
   </section>
 
 </div>
 
-<div class="footer">© 2025 – Kur'an Kelime Kelime Anlam Çalışması</div>
+<div class="footer">
+  © 2025 – Kur'an Kelime Kelime Anlam Çalışması
+</div>
 
+<!-- ✅ Ortak Navbar -->
 <div id="navbar-host"></div>
 <script src="common/navbar.js"></script>
 
